@@ -47,3 +47,31 @@ li a {
 li a:hover {
     text-decoration: underline;
 }
+/* Existing styles */
+
+#resume h3 {
+    color: #4CAF50;
+    margin-bottom: 0.5em;
+}
+
+.experience-item, .project-item, .activity-item {
+    margin-bottom: 1.5em;
+}
+
+.experience-item ul, .project-item ul, .activity-item ul {
+    list-style-type: disc;
+    margin-left: 1.5em;
+}
+
+p, ul {
+    color: #333;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    width: 100%;
+}
