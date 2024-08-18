@@ -6,7 +6,7 @@ body {
     background-color: #f0f0f0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensures the body height is at least the height of the viewport */
+    min-height: 100vh;
 }
 
 header {
@@ -17,7 +17,7 @@ header {
 }
 
 main {
-    flex: 1; /* Expands to fill available space */
+    flex: 1;
     padding: 2em;
 }
 
@@ -26,12 +26,11 @@ footer {
     color: white;
     text-align: center;
     padding: 1em 0;
-    /* Remove fixed positioning to make it static */
     position: static;
 }
 
 footer p {
-    margin: 0; /* Remove default margin around the p element to adjust spacing */
+    margin: 0;
 }
 
 section {
@@ -75,6 +74,20 @@ hr {
 
 .experience-item p, .project-item p, .activity-item p {
     margin-bottom: 0.5em;
+}
+
+/* Contact Info Centering */
+#contact-info {
+    text-align: center;
+    margin: 0 auto;
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact-info p {
+    margin: 0.5em 0;
 }
 
 /* Media Queries for Responsive Design */
