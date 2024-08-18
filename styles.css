@@ -41,39 +41,56 @@ section {
     margin-bottom: 2em;
 }
 
-h1, h2 {
-    margin-top: 0;
+h1, h2, h3 {
+    color: #333;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li a {
-    text-decoration: none;
+h4 {
     color: #4CAF50;
 }
 
-li a:hover {
-    text-decoration: underline;
+/* Header Image Styling */
+.header-image {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 2em;
 }
 
-/* Resume Section Styles */
-#resume h3 {
-    color: #4CAF50;
-    margin-bottom: 0.5em;
+/* Styling for Horizontal Line Separators */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #4CAF50;
+    margin: 2em 0;
 }
 
+/* Styling for Resume Sections */
 .experience-item, .project-item, .activity-item {
     margin-bottom: 1.5em;
 }
 
-.experience-item ul, .project-item ul, .activity-item ul {
-    list-style-type: disc;
-    margin-left: 1.5em;
+.experience-item h4, .project-item h4, .activity-item h4 {
+    margin-bottom: 0.5em;
 }
 
-p, ul {
-    color: #333;
+.experience-item p, .project-item p, .activity-item p {
+    margin-bottom: 0.5em;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 1em;
+    }
+
+    .header-image {
+        width: 150px;
+    }
+
+    hr {
+        margin: 1.5em 0;
+    }
 }
