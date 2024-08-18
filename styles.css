@@ -80,10 +80,13 @@ hr {
 #contact {
     text-align: center;
     margin: 0 auto; /* Ensure auto margin to center the section */
-    max-width: 600px; /* Set a max-width to limit the section's width */
-    padding: 2em;
+    max-width: 450px; /* Set a max-width to limit the section's width */
+    padding-top: 8px;    /* Padding for the top */
+    padding-right: 15px;  /* Padding for the right */
+    padding-bottom: 15px; /* Padding for the bottom */
+    padding-left: 15px;   /* Padding for the left */
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds some shadow */
 }
 
