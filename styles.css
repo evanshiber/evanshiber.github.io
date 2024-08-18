@@ -25,13 +25,16 @@ footer {
     background-color: #4CAF50;
     color: white;
     text-align: center;
-    padding: 2em; /* Adjust padding as needed */
-    height: 1em; /* Set a fixed height if padding alone doesn't work */
+    padding: 1em 0; /* Reduce padding to adjust spacing around text */
     position: fixed; /* Makes the footer stick to the bottom of the viewport */
     bottom: 0;
     left: 0;
     width: 100%;
     z-index: 100; /* Ensures the footer stays on top of other content */
+}
+
+footer p {
+    margin: 0; /* Remove default margin around the p element to adjust spacing */
 }
 
 section {
