@@ -132,7 +132,7 @@ footer {
 
 .custom-line {
     border: none;           /* Removes default styling */
-    height: 2px;            /* Sets thickness */
+    height: 1px;            /* Sets thickness */
     background-color: #000000; /* Sets color */
     width: 100%;            /* Optional: controls the width */
 }
