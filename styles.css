@@ -19,7 +19,6 @@ header {
     color: white;
     text-align: center;
     padding: 1rem;
-    position: relative;
     width: 100vw;  /* Ensure the header extends full width */
     box-sizing: border-box;
 }
@@ -54,6 +53,7 @@ main {
     margin: 0 auto;
 }
 
+/* Footer Styling */
 footer {
     background-color: #4CAF50;
     color: white;
