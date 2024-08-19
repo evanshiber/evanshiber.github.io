@@ -18,7 +18,7 @@ header {
 
 main {
     flex: 1;
-    padding: 20px;
+    padding: 2em;
 }
 
 footer {
@@ -26,49 +26,15 @@ footer {
     color: white;
     text-align: center;
     padding: 1em 0;
-    margin-top: auto;
+    position: static;
 }
 
-/* Bubble Section Styling */
-.bubble-section {
-    background-color: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+footer p {
+    margin: 0;
 }
 
-/* Header Image Styling */
-.header-image {
-    display: block;
-    margin: 0 auto 20px;
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-}
-
-/* Contact Section Styling */
-#contact a {
-    color: #4CAF50;
-    text-decoration: none;
-}
-
-#contact a:hover {
-    text-decoration: underline;
-}
-
-/* Styling for Horizontal Line Separators */
-hr {
-    border: 0;
-    height: 1px;
-    background-color: #4CAF50;
-    margin: 20px 0;
-}
-
-/* Experience, Projects, and Activities Item Styling */
-.experience-item, .project-item, .activity-item {
-    margin-bottom: 20px;
+section {
+    margin-bottom: 2em;
 }
 
 h1, h2, h3 {
@@ -79,22 +45,75 @@ h4 {
     color: #4CAF50;
 }
 
-/* Footer Styling */
-footer p {
-    margin: 0;
+/* Header Image Styling */
+.header-image {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 2em;
+}
+
+/* Styling for Horizontal Line Separators */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #4CAF50;
+    margin: 2em 0;
+}
+
+/* Styling for Resume Sections */
+.experience-item, .project-item, .activity-item {
+    margin-bottom: 1.5em;
+}
+
+.experience-item h4, .project-item h4, .activity-item h4 {
+    margin-bottom: 0.5em;
+}
+
+.experience-item p, .project-item p, .activity-item p {
+    margin-bottom: 0.5em;
+}
+
+/* Contact Section Styling */
+#contact {
+    text-align: center;
+    margin: 0 auto; /* Ensure auto margin to center the section */
+    max-width: 450px; /* Set a max-width to limit the section's width */
+    padding-top: 5px;    /* Padding for the top */
+    padding-right: 15px;  /* Padding for the right */
+    padding-bottom: 20px; /* Padding for the bottom */
+    padding-left: 15px;   /* Padding for the left */
+    background-color: #fff;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds some shadow */
+}
+
+#contact p {
+    margin: 0.5em 0;
+}
+
+#contact a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
 }
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     main {
-        padding: 10px;
+        padding: 1em;
     }
 
     .header-image {
-        width: 120px;
+        width: 150px;
     }
 
-    .bubble-section {
-        padding: 15px;
+    hr {
+        margin: 1.5em 0;
     }
 }
