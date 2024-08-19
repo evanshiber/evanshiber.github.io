@@ -129,3 +129,10 @@ footer {
         max-width: 150px; /* Adjust the maximum width on smaller screens */
     }
 }
+
+.custom-line {
+    border: none;           /* Removes default styling */
+    height: 2px;            /* Sets thickness */
+    background-color: #4CAF50; /* Sets color */
+    width: 100%;            /* Optional: controls the width */
+}
