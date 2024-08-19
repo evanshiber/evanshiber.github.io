@@ -7,7 +7,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-size: 18px; /* Adjust base font size here */
+    font-size: 18px; /* Adjust base font size */
 }
 
 header {
@@ -28,8 +28,12 @@ header p {
 }
 
 header img.header-image {
-    width: 100%;
-    height: auto;
+    display: block;
+    max-width: 100%; /* Ensure the image fits within the container */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image */
+    border-radius: 50%;
+    margin-bottom: 2em;
 }
 
 main {
@@ -106,4 +110,16 @@ footer {
 .project-item li,
 .activity-item li {
     font-size: 1.1em; /* Adjust list item size */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Adjust font size on smaller screens if needed */
+    }
+
+    .header-image {
+        width: 80%; /* Adjust the width on smaller screens */
+        max-width: 300px; /* Set a maximum width */
+    }
 }
