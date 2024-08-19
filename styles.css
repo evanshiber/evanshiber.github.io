@@ -7,6 +7,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-size: 18px; /* Adjust base font size here */
 }
 
 header {
@@ -18,10 +19,12 @@ header {
 
 header h1 {
     margin: 0;
+    font-size: 2.5em; /* Adjust heading size */
 }
 
 header p {
     margin: 0;
+    font-size: 1.2em; /* Adjust subheading size */
 }
 
 header img.header-image {
@@ -54,13 +57,21 @@ footer {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.resume-section h2,
-.resume-section h3 {
+.resume-section h2 {
     margin-top: 0;
+    font-size: 2em; /* Adjust section heading size */
+}
+
+.resume-section h3 {
+    font-size: 1.5em; /* Adjust subsection heading size */
 }
 
 .resume-section h4 {
-    margin-top: 0;
+    font-size: 1.2em; /* Adjust smaller heading size */
+}
+
+.resume-section p {
+    font-size: 1.1em; /* Adjust paragraph text size */
 }
 
 /* Section Specific Styles */
@@ -88,4 +99,11 @@ footer {
 .activity-item ul {
     margin: 0;
     padding-left: 20px;
+}
+
+/* Increase font size for list items */
+.experience-item li,
+.project-item li,
+.activity-item li {
+    font-size: 1.1em; /* Adjust list item size */
 }
