@@ -1,188 +1,156 @@
-/* Main Layout and General Styling */
-body {
-    font-family: 'Poppins', sans-serif; /* Changed to a modern font */
+/* General Styles */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    transition: background-color 0.5s ease; /* Smooth transition for background color */
 }
 
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styling */
 header {
-    background-color: #00796b;
+    background-color: #283593;
     color: white;
-    padding: 1.5em;
+    padding: 40px 0;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-bottom-left-radius: 50px; /* Rounded edges for a 'bubbly' look */
-    border-bottom-right-radius: 50px;
 }
 
 header h1 {
-    font-size: 2.5em;
-    margin: 0;
-    letter-spacing: 2px;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
 header p {
-    font-size: 1.2em;
-    font-style: italic;
+    font-size: 1.2rem;
+    margin: 0;
 }
 
-main {
-    flex: 1;
-    padding: 2em;
+/* Section Styling */
+.section {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #283593;
+}
+
+/* Profile Section */
+#profile {
     text-align: center;
 }
 
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+}
+
+/* Contact Section */
+#contact p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+#contact a {
+    color: #283593;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Resume Section */
+h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 30px;
+}
+
+.experience-item,
+.project-item,
+.activity-item {
+    margin-bottom: 30px;
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: #283593;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer Styling */
 footer {
-    background-color: #00796b;
+    background-color: #283593;
     color: white;
     text-align: center;
-    padding: 1em 0;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    position: static;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    margin-top: auto;
 }
 
 footer p {
     margin: 0;
 }
 
-section {
-    margin-bottom: 2em;
-    background-color: #ffffff;
-    padding: 1.5em;
-    border-radius: 25px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-section:hover {
-    transform: scale(1.03); /* Slight zoom on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
-}
-
-h1, h2, h3 {
-    color: #333;
-    letter-spacing: 1px;
-}
-
-h4 {
-    color: #00796b;
-}
-
-p, ul {
-    text-align: left;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin-bottom: 0.5em;
-    position: relative;
-    padding-left: 20px;
-}
-
-li:before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: #00796b;
-    font-size: 1.5em;
-    line-height: 1.2;
-}
-
-/* Header Image Styling */
-.header-image {
-    display: block;
-    margin: 0 auto;
-    width: 250px;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 2em;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease;
-}
-
-.header-image:hover {
-    transform: rotate(360deg); /* Fun spin animation on hover */
-}
-
-/* Styling for Horizontal Line Separators */
-hr {
-    border: 0;
-    height: 2px;
-    background-color: #00796b;
-    margin: 2em 0;
-}
-
-/* Contact Section Styling */
-#contact {
-    text-align: center;
-    margin: 0 auto;
-    max-width: 450px;
-    padding-top: 5px;
-    padding-right: 5px;
-    padding-bottom: 20px;
-    padding-left: 5px;
-    background-color: #ffffff;
-    border-radius: 25px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#contact p {
-    margin: 0.5em 0;
-}
-
-#contact a {
-    color: #00796b;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-#contact a:hover {
-    text-decoration: underline;
-    color: #004d40;
-}
-
-/* Buttons */
-button {
-    background-color: #00796b;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-button:hover {
-    background-color: #004d40;
-    transform: scale(1.05);
-}
-
-/* Media Queries for Responsive Design */
+/* Responsive Design */
 @media (max-width: 768px) {
-    main {
-        padding: 1em;
+    .container {
+        width: 95%;
     }
 
-    .header-image {
-        width: 150px;
+    header h1 {
+        font-size: 2rem;
     }
 
-    hr {
-        margin: 1.5em 0;
+    header p {
+        font-size: 1rem;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    h4 {
+        font-size: 1.1rem;
     }
 }
