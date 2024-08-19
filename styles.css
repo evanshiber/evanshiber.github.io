@@ -1,85 +1,101 @@
-/* General Styles */
-* {
-    box-sizing: border-box;
+/* Main Layout and General Styling */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f7f9fc;
-    color: #333;
-    line-height: 1.6;
+    background-color: #f0f0f0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-.container {
-    width: 85%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Header Styling */
 header {
-    background-color: #283593;
+    background-color: #4CAF50;
     color: white;
-    padding: 40px 0;
+    padding: 1em;
     text-align: center;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+main {
+    flex: 1;
+    padding: 2em;
 }
 
-header p {
-    font-size: 1.2rem;
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: static;
+}
+
+footer p {
     margin: 0;
 }
 
-/* Section Styling */
-.section {
-    margin: 40px 0;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+section {
+    margin-bottom: 2em;
 }
 
-.section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #283593;
+h1, h2, h3 {
+    color: #333;
 }
 
-/* Profile Section */
-#profile {
-    text-align: center;
+h4 {
+    color: #4CAF50;
 }
 
-.profile-image {
-    width: 150px;
-    height: 150px;
+/* Header Image Styling */
+.header-image {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: auto;
     border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
+    margin-bottom: 2em;
 }
 
-.intro-text {
-    font-size: 1.1rem;
+/* Styling for Horizontal Line Separators */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #4CAF50;
+    margin: 2em 0;
 }
 
-/* Contact Section */
+/* Styling for Resume Sections */
+.experience-item, .project-item, .activity-item {
+    margin-bottom: 1.5em;
+}
+
+.experience-item h4, .project-item h4, .activity-item h4 {
+    margin-bottom: 0.5em;
+}
+
+.experience-item p, .project-item p, .activity-item p {
+    margin-bottom: 0.5em;
+}
+
+/* Contact Section Styling */
+#contact {
+    text-align: center;
+    margin: 0 auto; /* Ensure auto margin to center the section */
+    max-width: 450px; /* Set a max-width to limit the section's width */
+    padding-top: 5px;    /* Padding for the top */
+    padding-right: 5px;  /* Padding for the right */
+    padding-bottom: 20px; /* Padding for the bottom */
+    padding-left: 5px;   /* Padding for the left */
+    background-color: #fff;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds some shadow */
+}
+
 #contact p {
-    font-size: 1rem;
-    margin: 10px 0;
+    margin: 0.5em 0;
 }
 
 #contact a {
-    color: #283593;
+    color: #4CAF50;
     text-decoration: none;
 }
 
@@ -87,70 +103,17 @@ header p {
     text-decoration: underline;
 }
 
-/* Resume Section */
-h3 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-top: 30px;
-}
-
-.experience-item,
-.project-item,
-.activity-item {
-    margin-bottom: 30px;
-}
-
-h4 {
-    font-size: 1.2rem;
-    color: #283593;
-    margin-bottom: 10px;
-}
-
-ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-/* Footer Styling */
-footer {
-    background-color: #283593;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: auto;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Responsive Design */
+/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-    .container {
-        width: 95%;
+    main {
+        padding: 1em;
     }
 
-    header h1 {
-        font-size: 2rem;
+    .header-image {
+        width: 150px;
     }
 
-    header p {
-        font-size: 1rem;
-    }
-
-    .section h2 {
-        font-size: 1.8rem;
-    }
-
-    h3 {
-        font-size: 1.3rem;
-    }
-
-    h4 {
-        font-size: 1.1rem;
+    hr {
+        margin: 1.5em 0;
     }
 }

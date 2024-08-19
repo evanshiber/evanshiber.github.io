@@ -2,163 +2,165 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Evan Shiber - Cyber Security Engineer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Evan Shiber</h1>
-            <p>Cyber Security Engineer</p>
-        </div>
+        <h1>Evan Shiber</h1>
+        <p>Cyber Security Engineer</p>
     </header>
-
     <main>
-        <section id="profile" class="section">
-            <div class="container">
-                <img src="images/SelfPicture.jpg" alt="Profile Picture" class="profile-image">
-                <p class="intro-text">I'm a Cybersecurity student passionate about protecting systems from threats. Welcome to my portfolio!</p>
-            </div>
+        <img src="images/SelfPicture.jpg" alt="A description of the image" class="header-image">
+
+       <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p><strong>Email:</strong> <a href="mailto:shiberevan@gmail.com">shiberevan@gmail.com</a></p>
+            <p><strong>Phone:</strong> (201) 937-5702</p>
+            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/evan-shiber" target="_blank">linkedin.com/in/evan-shiber</a></p>
         </section>
 
-        <section id="contact" class="section">
-            <div class="container">
-                <h2>Contact</h2>
-                <p><strong>Email:</strong> <a href="mailto:shiberevan@gmail.com">shiberevan@gmail.com</a></p>
-                <p><strong>Phone:</strong> (201) 937-5702</p>
-                <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/evan-shiber" target="_blank">linkedin.com/in/evan-shiber</a></p>
-            </div>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Cybersecurity studet passionate about protecting systems from threats.</p>
         </section>
 
-        <section id="resume" class="section">
-            <div class="container">
-                <h2>Resume</h2>
+        <hr> <!-- Horizontal line separating sections -->
 
-                <h3>Education</h3>
-                <p><strong>Iowa State University</strong> - Ames, IA<br>
-                    <em>Bachelor of Science in Cyber Security Engineering</em><br>
-                    Aug. 2021 -- May 2025</p>
+        <section id="resume">
 
-                <h3>Experience</h3>
-                <div class="experience-item">
-                    <h4>IT Operations Support Specialist</h4>
-                    <p><strong>ICS Advanced Technologies</strong> - Ames, IA<br>June 2024 -- Sep. 2024</p>
-                    <ul>
-                        <li>Network Engineering duties HERE, etc.</li>
-                        <li>DNS, routing table, DPSK config, etc.</li>
-                        <li>Network/Internet Troubleshooting, Network Hardware Configuration (Router, Switch, AP)</li>
-                        <li>VLAN Configuration, DHCP Implementation/Configuration/Management</li>
-                    </ul>
-                </div>
+            <h2>Resume</h2>
+            <hr> <!-- Horizontal line separating sections -->
+            <h3>Education</h3>
+            <p><strong>Iowa State University</strong> - Ames, IA<br>
+                <em>Bachelor of Science in Cyber Security Engineering</em><br>
+                Aug. 2021 -- May 2025</p>
 
-                <div class="experience-item">
-                    <h4>Host</h4>
-                    <p><strong>Northvale Classic Diner</strong> - Northvale, NJ<br>May 2023 -- Aug. 2023</p>
-                    <ul>
-                        <li>Managed reservations and optimized table allocation to reduce wait times by 15 to 25 minutes during peak hours</li>
-                        <li>Led kitchen staff to ensure proper and timely food preparation, enhancing overall customer satisfaction</li>
-                    </ul>
-                </div>
+            <hr> <!-- Horizontal line separating sections -->
 
-                <div class="experience-item">
-                    <h4>Sales Associate</h4>
-                    <p><strong>Dunkin'</strong> - Norwood, NJ<br>Sep. 2019 -- Aug. 2022</p>
-                    <ul>
-                        <li>Processed over 200 transactions daily and exceeded operational efficiency standards by up to 20%</li>
-                        <li>Stocked products and rolled out marketing campaigns, resulting in a 5% daily revenue increase</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item">
-                    <h4>Volunteer</h4>
-                    <p><strong>Montclair Animal Shelter</strong> - Montclair, NJ<br>Jan. 2017 -- Aug. 2021</p>
-                    <ul>
-                        <li>Provided care for orphaned animals, resulting in the successful rehoming of over 100 animals</li>
-                        <li>Assisted in paperwork and data management during the adoption process, leading to 30% increased adoption rates</li>
-                    </ul>
-                </div>
-
-                <h3>Projects</h3>
-                <div class="project-item">
-                    <h4>Student Schedule Android App</h4>
-                    <p><strong>Technologies:</strong> Java, Git, CI/CD, Postman, PAM<br>Aug. 2023 -- Dec. 2023</p>
-                    <ul>
-                        <li>Students can see course descriptions, register for courses, and leave reviews/ratings for taken courses/professors</li>
-                        <li>Employed WebSocket for real-time chat between students and advisors, along with advisors and administrators</li>
-                        <li>Implemented user authentication for Privileged Access Management for Admin, Advisor, and Student user types</li>
-                    </ul>
-                </div>
-
-                <div class="project-item">
-                    <h4>Digital Logic Circuit</h4>
-                    <p><strong>Technologies:</strong> Verilog HDL, Quartus Prime<br>Jan. 2023 -- May 2023</p>
-                    <ul>
-                        <li>Produced a complete digital logic circuit using Quartus Prime software and Verilog HDL</li>
-                        <li>Created and employed a Finite State Machine (FSM), a 16-bit binary counter, a register file, a ripple-carry adder, multiple seven-segment displays, and user-controlled inputs on an Altera DE2-115 Cyclone IV FPGA</li>
-                    </ul>
-                </div>
-
-                <h3>Activities</h3>
-                <div class="activity-item">
-                    <h4>Hack The Box (CTF)</h4>
-                    <p>Jan. 2024 -- Present</p>
-                    <ul>
-                        <li>Engage in Capture The Flag (CTF) competitions, performing various offensive (Red Team) penetration testing techniques.</li>
-                    </ul>
-                </div>
-
-                <div class="activity-item">
-                    <h4>Cyber Defense Competitions (CDC)</h4>
-                    <p>Sep. 2023 -- Present</p>
-                    <ul>
-                        <li>Blue Team participant, contributing to the setup and defense of networks prior to competition commencement</li>
-                        <li>Analyze network traffic to detect anomalies, mitigating potential vulnerabilities across competition scenarios</li>
-                    </ul>
-                </div>
-
-                <div class="activity-item">
-                    <h4>Hackathon Club (HACK)</h4>
-                    <p>Jan. 2023 -- Present</p>
-                    <ul>
-                        <li>Facilitate meetings before Hackathon events at Iowa State and surrounding Universities</li>
-                        <li>Relay upcoming Hackathon details, organize event transportation, and host additional workshops and events</li>
-                    </ul>
-                </div>
-
-                <div class="activity-item">
-                    <h4>Computer Science and Software Engineering Club (CSE)</h4>
-                    <p>Jan. 2023 -- Present</p>
-                    <ul>
-                        <li>Attend social events such as presentations from industry professionals, students, and faculty</li>
-                        <li>Solve programming challenges and present solutions to faculty and peers</li>
-                    </ul>
-                </div>
-
-                <div class="activity-item">
-                    <h4>Hacking and Cyber Security Club (HACC)</h4>
-                    <p>May 2022 -- Present</p>
-                    <ul>
-                        <li>Gain experience with industry practices such as firewalls, secure coding, network design, and social engineering</li>
-                        <li>Weekly meetings include presentations, demonstrations, and labs presented by officers, club members, and guest speakers such as industry professionals</li>
-                    </ul>
-                </div>
-
-                <h3>Technical Skills</h3>
-                <p><strong>Tools:</strong> Penetration Testing, Network Security, Kali Linux, Wireshark, Splunk, Nmap, Nessus, pfSense, IDS/IPS</p>
-                <p><strong>Software:</strong> Java, Python, C/C++, SQL, MIPS Assembly, Git, Postman API, CI/CD, VS Code, Quartus Prime, Eclipse</p>
-                <p><strong>Other:</strong> SIEM, MITRE ATT&CK, Cryptography, AI Prompting</p>
+            <h3>Experience</h3>
+            <div class="experience-item">
+                <h4>IT Operations Support Specialist</h4>
+                <p><strong>ICS Advanced Technologies</strong> - Ames, IA<br>June 2024 -- Sep. 2024</p>
+                <ul>
+                    <li>Network Engineering duties HERE, etc.</li>
+                    <li>DNS, routing table, DPSK config, etc.</li>
+                    <li>Network/Internet Troubleshooting, Network Hardware Configuration (Router, Switch, AP)</li>
+                    <li>VLAN Configuration, DHCP Implementation/Configuration/Management</li>
+                </ul>
             </div>
+
+            <div class="experience-item">
+                <h4>Host</h4>
+                <p><strong>Northvale Classic Diner</strong> - Northvale, NJ<br>May 2023 -- Aug. 2023</p>
+                <ul>
+                    <li>Managed reservations and optimized table allocation to reduce wait times by 15 to 25 minutes during peak hours</li>
+                    <li>Led kitchen staff to ensure proper and timely food preparation, enhancing overall customer satisfaction</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h4>Sales Associate</h4>
+                <p><strong>Dunkin'</strong> - Norwood, NJ<br>Sep. 2019 -- Aug. 2022</p>
+                <ul>
+                    <li>Processed over 200 transactions daily and exceeded operational efficiency standards by up to 20%</li>
+                    <li>Stocked products and rolled out marketing campaigns, resulting in a 5% daily revenue increase</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h4>Volunteer</h4>
+                <p><strong>Montclair Animal Shelter</strong> - Montclair, NJ<br>Jan. 2017 -- Aug. 2021</p>
+                <ul>
+                    <li>Provided care for orphaned animals, resulting in the successful rehoming of over 100 animals</li>
+                    <li>Assisted in paperwork and data management during the adoption process, leading to 30% increased adoption rates</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <h3>Projects</h3>
+            <div class="project-item">
+                <h4>Student Schedule Android App</h4>
+                <p><strong>Technologies:</strong> Java, Git, CI/CD, Postman, PAM<br>Aug. 2023 -- Dec. 2023</p>
+                <ul>
+                    <li>Students can see course descriptions, register for courses, and leave reviews/ratings for taken courses/professors</li>
+                    <li>Employed WebSocket for real-time chat between students and advisors, along with advisors and administrators</li>
+                    <li>Implemented user authentication for Privileged Access Management for Admin, Advisor, and Student user types</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <h4>Digital Logic Circuit</h4>
+                <p><strong>Technologies:</strong> Verilog HDL, Quartus Prime<br>Jan. 2023 -- May 2023</p>
+                <ul>
+                    <li>Produced a complete digital logic circuit using Quartus Prime software and Verilog HDL</li>
+                    <li>Created and employed a Finite State Machine (FSM), a 16-bit binary counter, a register file, a ripple-carry adder, multiple seven-segment displays, and user-controlled inputs on an Altera DE2-115 Cyclone IV FPGA</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <h3>Activities</h3>
+            <div class="activity-item">
+                <h4>Hack The Box (CTF)</h4>
+                <p>Jan. 2024 -- Present</p>
+                <ul>
+                    <li>Engage in Capture The Flag (CTF) competitions, performing various offensive (Red Team) penetration testing techniques.</li>
+                </ul>
+            </div>
+
+            <div class="activity-item">
+                <h4>Cyber Defense Competitions (CDC)</h4>
+                <p>Sep. 2023 -- Present</p>
+                <ul>
+                    <li>Blue Team participant, contributing to the setup and defense of networks prior to competition commencement</li>
+                    <li>Analyze network traffic to detect anomalies, mitigating potential vulnerabilities across competition scenarios</li>
+                </ul>
+            </div>
+
+            <div class="activity-item">
+                <h4>Hackathon Club (HACK)</h4>
+                <p>Jan. 2023 -- Present</p>
+                <ul>
+                    <li>Facilitate meetings before Hackathon events at Iowa State and surrounding Universities</li>
+                    <li>Relay upcoming Hackathon details, organize event transportation, and host additional workshops and events</li>
+                </ul>
+            </div>
+
+            <div class="activity-item">
+                <h4>Computer Science and Software Engineering Club (CSE)</h4>
+                <p>Jan. 2023 -- Present</p>
+                <ul>
+                    <li>Attend social events such as presentations from industry professionals, students, and faculty</li>
+                    <li>Solve programming challenges and present solutions to faculty and peers</li>
+                </ul>
+            </div>
+
+            <div class="activity-item">
+                <h4>Hacking and Cyber Security Club (HACC)</h4>
+                <p>May 2022 -- Present</p>
+                <ul>
+                    <li>Gain experience with industry practices such as firewalls, secure coding, network design, and social engineering</li>
+                    <li>Weekly meetings include presentations, demonstrations, and labs presented by officers, club members, and guest speakers such as industry professionals</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <h3>Technical Skills</h3>
+            <p><strong>Tools:</strong> Penetration Testing, Network Security, Kali Linux, Wireshark, Splunk, Nmap, Nessus, pfSense, IDS/IPS</p>
+            <p><strong>Software:</strong> Java, Python, C/C++, SQL, MIPS Assembly, Git, Postman API, CI/CD, VS Code, Quartus Prime, Eclipse</p>
+            <p><strong>Other:</strong> SIEM, MITRE ATT&CK, Cryptography, AI Prompting</p>
         </section>
     </main>
-
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Evan Shiber</p>
-        </div>
+        <p>&copy; 2024 Evan Shiber</p>
     </footer>
-
     <script src="scripts.js"></script>
 </body>
 </html>
