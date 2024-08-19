@@ -12,86 +12,49 @@ body {
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 1em;
+    padding: 20px;
     text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+p {
+    margin: 0;
 }
 
 main {
     flex: 1;
-    padding: 2em;
+    padding: 20px;
 }
 
 footer {
-    background-color: #4CAF50;
+    background-color: #333;
     color: white;
     text-align: center;
-    padding: 1em 0;
-    position: static;
+    padding: 10px 0;
+    margin-top: auto;
 }
 
-footer p {
-    margin: 0;
-}
-
+/* Sections Styling */
 section {
-    margin-bottom: 2em;
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2, h3 {
+h2 {
+    margin-top: 0;
     color: #333;
-}
-
-h4 {
-    color: #4CAF50;
-}
-
-/* Header Image Styling */
-.header-image {
-    display: block;
-    margin: 0 auto;
-    width: 200px;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 2em;
-}
-
-/* Styling for Horizontal Line Separators */
-hr {
-    border: 0;
-    height: 1px;
-    background-color: #4CAF50;
-    margin: 2em 0;
-}
-
-/* Styling for Resume Sections */
-.experience-item, .project-item, .activity-item {
-    margin-bottom: 1.5em;
-}
-
-.experience-item h4, .project-item h4, .activity-item h4 {
-    margin-bottom: 0.5em;
-}
-
-.experience-item p, .project-item p, .activity-item p {
-    margin-bottom: 0.5em;
 }
 
 /* Contact Section Styling */
 #contact {
-    text-align: center;
-    margin: 0 auto; /* Ensure auto margin to center the section */
-    max-width: 450px; /* Set a max-width to limit the section's width */
-    padding-top: 5px;    /* Padding for the top */
-    padding-right: 15px;  /* Padding for the right */
-    padding-bottom: 20px; /* Padding for the bottom */
-    padding-left: 15px;   /* Padding for the left */
-    background-color: #fff;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds some shadow */
-}
-
-#contact p {
-    margin: 0.5em 0;
+    background-color: #fafafa;
 }
 
 #contact a {
@@ -99,21 +62,39 @@ hr {
     text-decoration: none;
 }
 
-#contact a:hover {
-    text-decoration: underline;
+/* Experience Section Styling */
+.experience-item {
+    margin-bottom: 20px;
 }
 
-/* Media Queries for Responsive Design */
-@media (max-width: 768px) {
-    main {
-        padding: 1em;
-    }
+/* Projects Section Styling */
+.project-item {
+    margin-bottom: 20px;
+}
 
-    .header-image {
-        width: 150px;
-    }
+/* Activities Section Styling */
+.activity-item {
+    margin-bottom: 20px;
+}
 
-    hr {
-        margin: 1.5em 0;
-    }
+/* Skills Section Styling */
+#skills {
+    background-color: #e0f7fa;
+    padding: 20px;
+}
+
+/* Image Styling */
+.header-image {
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Footer Styling */
+footer p {
+    margin: 0;
+    font-size: 14px;
 }
