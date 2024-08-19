@@ -12,49 +12,86 @@ body {
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 20px;
+    padding: 1em;
     text-align: center;
-}
-
-h1 {
-    margin: 0;
-    font-size: 36px;
-}
-
-p {
-    margin: 0;
 }
 
 main {
     flex: 1;
-    padding: 20px;
+    padding: 2em;
 }
 
 footer {
-    background-color: #333;
+    background-color: #4CAF50;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    margin-top: auto;
+    padding: 1em 0;
+    position: static;
 }
 
-/* Sections Styling */
+footer p {
+    margin: 0;
+}
+
 section {
-    margin-bottom: 30px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
 }
 
-h2 {
-    margin-top: 0;
+h1, h2, h3 {
     color: #333;
+}
+
+h4 {
+    color: #4CAF50;
+}
+
+/* Header Image Styling */
+.header-image {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 2em;
+}
+
+/* Styling for Horizontal Line Separators */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #4CAF50;
+    margin: 2em 0;
+}
+
+/* Styling for Resume Sections */
+.experience-item, .project-item, .activity-item {
+    margin-bottom: 1.5em;
+}
+
+.experience-item h4, .project-item h4, .activity-item h4 {
+    margin-bottom: 0.5em;
+}
+
+.experience-item p, .project-item p, .activity-item p {
+    margin-bottom: 0.5em;
 }
 
 /* Contact Section Styling */
 #contact {
-    background-color: #fafafa;
+    text-align: center;
+    margin: 0 auto; /* Ensure auto margin to center the section */
+    max-width: 450px; /* Set a max-width to limit the section's width */
+    padding-top: 5px;    /* Padding for the top */
+    padding-right: 15px;  /* Padding for the right */
+    padding-bottom: 20px; /* Padding for the bottom */
+    padding-left: 15px;   /* Padding for the left */
+    background-color: #fff;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds some shadow */
+}
+
+#contact p {
+    margin: 0.5em 0;
 }
 
 #contact a {
@@ -62,39 +99,21 @@ h2 {
     text-decoration: none;
 }
 
-/* Experience Section Styling */
-.experience-item {
-    margin-bottom: 20px;
+#contact a:hover {
+    text-decoration: underline;
 }
 
-/* Projects Section Styling */
-.project-item {
-    margin-bottom: 20px;
-}
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 1em;
+    }
 
-/* Activities Section Styling */
-.activity-item {
-    margin-bottom: 20px;
-}
+    .header-image {
+        width: 150px;
+    }
 
-/* Skills Section Styling */
-#skills {
-    background-color: #e0f7fa;
-    padding: 20px;
-}
-
-/* Image Styling */
-.header-image {
-    display: block;
-    margin: 0 auto 20px;
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-}
-
-/* Footer Styling */
-footer p {
-    margin: 0;
-    font-size: 14px;
+    hr {
+        margin: 1.5em 0;
+    }
 }
