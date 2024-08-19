@@ -12,131 +12,80 @@ body {
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 1em;
     text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 0;
+}
+
+header img.header-image {
+    width: 100%;
+    height: auto;
 }
 
 main {
-    flex: 1;
-    padding: 2em;
+    padding: 1rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 footer {
     background-color: #4CAF50;
     color: white;
     text-align: center;
-    padding: 1em 0;
-    position: static;
-}
-
-footer p {
-    margin: 0;
-}
-
-section {
-    margin-bottom: 2em;
-    position: relative; /* Position relative to use pseudo-elements */
-    padding: 1em;
+    padding: 1rem;
+    margin-top: auto;
 }
 
 /* Resume Section Styling */
-#resume .resume-section {
-    position: relative;
-    background-color: #e0f7fa; /* Light blue background color */
-    padding: 1em;
-    border-radius: 10px;
-    margin-bottom: 2em;
+.resume-section {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#resume .resume-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff; /* White background for the section */
-    z-index: -1; /* Send background box to the back */
-    border-radius: 10px;
+.resume-section h2,
+.resume-section h3 {
+    margin-top: 0;
 }
 
-h1, h2, h3 {
-    color: #333;
+.resume-section h4 {
+    margin-top: 0;
 }
 
-h4 {
-    color: #4CAF50;
-}
-
-/* Header Image Styling */
-.header-image {
-    display: block;
-    margin: 0 auto;
-    width: 200px;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 2em;
-}
-
-/* Styling for Horizontal Line Separators */
-hr {
-    border: 0;
-    height: 1px;
-    background-color: #4CAF50;
-    margin: 2em 0;
-}
-
-/* Styling for Resume Sections */
-.experience-item, .project-item, .activity-item {
-    margin-bottom: 1.5em;
-}
-
-.experience-item h4, .project-item h4, .activity-item h4 {
-    margin-bottom: 0.5em;
-}
-
-.experience-item p, .project-item p, .activity-item p {
-    margin-bottom: 0.5em;
-}
-
-/* Contact Section Styling */
+/* Section Specific Styles */
 #contact {
-    text-align: center;
-    margin: 0 auto; /* Ensure auto margin to center the section */
-    max-width: 450px; /* Set a max-width to limit the section's width */
-    padding-top: 5px;    /* Padding for the top */
-    padding-right: 15px;  /* Padding for the right */
-    padding-bottom: 20px; /* Padding for the bottom */
-    padding-left: 15px;   /* Padding for the left */
-    background-color: #fff;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds some shadow */
+    margin-top: 1rem;
 }
 
-#contact p {
-    margin: 0.5em 0;
+#about {
+    margin-top: 1rem;
 }
 
-#contact a {
-    color: #4CAF50;
-    text-decoration: none;
+#resume {
+    margin-top: 1rem;
 }
 
-#contact a:hover {
-    text-decoration: underline;
+/* Experience, Projects, Activities, and Skills Items */
+.experience-item,
+.project-item,
+.activity-item {
+    margin-bottom: 1rem;
 }
 
-/* Media Queries for Responsive Design */
-@media (max-width: 768px) {
-    main {
-        padding: 1em;
-    }
-
-    .header-image {
-        width: 150px;
-    }
-
-    hr {
-        margin: 1.5em 0;
-    }
+.experience-item ul,
+.project-item ul,
+.activity-item ul {
+    margin: 0;
+    padding-left: 20px;
 }
