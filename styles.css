@@ -21,8 +21,6 @@ header {
     padding: 1rem;
     position: relative;
     width: 100vw;  /* Ensure the header extends full width */
-    left: 50%;
-    transform: translateX(-50%); /* Center the header horizontally */
     box-sizing: border-box;
 }
 
@@ -45,8 +43,6 @@ header img.header-image {
     border-radius: 50%;
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%); /* Center the image horizontally */
     margin-bottom: 2em;
 }
 
@@ -65,8 +61,6 @@ footer {
     padding: 1rem;
     margin-top: auto;
     width: 100vw;  /* Ensure the footer extends full width */
-    left: 50%;
-    transform: translateX(-50%); /* Center the footer horizontally */
     box-sizing: border-box;
 }
 
