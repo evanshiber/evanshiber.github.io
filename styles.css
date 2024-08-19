@@ -56,6 +56,8 @@ footer {
     text-align: center;
     padding: 1rem;
     margin-top: auto;
+    width: 100%;         /* Ensures the footer takes up the full width */
+    box-sizing: border-box; /* Include padding in the width calculation */
 }
 
 /* Resume Section Styling */
