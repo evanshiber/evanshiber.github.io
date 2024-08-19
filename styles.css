@@ -35,6 +35,29 @@ footer p {
 
 section {
     margin-bottom: 2em;
+    position: relative; /* Position relative to use pseudo-elements */
+    padding: 1em;
+}
+
+/* Resume Section Styling */
+#resume .resume-section {
+    position: relative;
+    background-color: #e0f7fa; /* Light blue background color */
+    padding: 1em;
+    border-radius: 10px;
+    margin-bottom: 2em;
+}
+
+#resume .resume-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff; /* White background for the section */
+    z-index: -1; /* Send background box to the back */
+    border-radius: 10px;
 }
 
 h1, h2, h3 {
