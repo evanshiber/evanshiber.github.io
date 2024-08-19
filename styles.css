@@ -17,6 +17,7 @@ header {
     text-align: center;
     padding: 1rem;
     position: relative; /* Add this to position the image relative to the header */
+    width: 130%;                /* Extend beyond the normal width */
 }
 
 header h1 {
@@ -56,7 +57,7 @@ footer {
     text-align: center;
     padding: 1rem;
     margin-top: auto;
-    width: 100%;         /* Ensures the footer takes up the full width */
+    width: 130%;         /* Ensures the footer takes up the full width */
     box-sizing: border-box; /* Include padding in the width calculation */
 }
 
