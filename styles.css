@@ -8,6 +8,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-size: 18px; /* Adjust base font size */
+    text-align: center; /* Center all text horizontally */
 }
 
 header {
@@ -65,6 +66,7 @@ footer {
     margin-bottom: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text in resume sections */
 }
 
 .resume-section h2 {
@@ -110,6 +112,8 @@ footer {
 .activity-item ul {
     margin: 0;
     padding-left: 20px;
+    text-align: left; /* Align text left for better readability in lists */
+    display: inline-block; /* Keep lists centered */
 }
 
 /* Increase font size for list items */
