@@ -77,7 +77,13 @@ footer {
 
 /* Contact Section Styling */
 .contact {
-    border-radius: 170px; /* Larger border radius for the Contact section */
+    background-color: white;
+    border: 1px solid #adc3ff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 170px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text in resume sections */
 }
 
 /* Resume Section Heading Styling */
