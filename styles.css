@@ -76,7 +76,7 @@ footer {
 }
 
 /* Contact Section Styling */
-#contact {
+.contact {
     border-radius: 170px; /* Larger border radius for the Contact section */
 }
 
