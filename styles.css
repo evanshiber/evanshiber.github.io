@@ -84,6 +84,23 @@ footer {
     max-width: 600px; /* Set a maximum width for larger screens */
 }
 
+/* Contact Section Icon Styling */
+.contact i {
+    margin-right: 0.5rem; /* Space between icon and text */
+    font-size: 1.2em; /* Adjust icon size to match the design */
+    vertical-align: middle; /* Align icons with text vertically */
+}
+
+/* Ensure the contact links have consistent styling */
+.contact a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Ensure link color matches text color */
+}
+
+.contact a:hover {
+    text-decoration: underline; /* Underline on hover for better visibility */
+}
+
 /* Resume Section Heading Styling */
 .resume-section h2 {
     margin-top: 0;
