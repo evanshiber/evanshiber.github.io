@@ -109,7 +109,7 @@ footer {
 .experience-item,
 .project-item,
 .activity-item {
-    margin-bottom: 2rem; /* Added space below each item */
+    margin-bottom: 1rem;
 }
 
 .experience-item ul,
@@ -126,6 +126,24 @@ footer {
 .project-item li,
 .activity-item li {
     font-size: 1.1em; /* Adjust list item size */
+}
+
+/* Adjustments to remove extra space between job title and company name */
+.experience-item h4,
+.experience-item p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2; /* Adjust line-height to control spacing */
+}
+
+/* Add a small margin below h4 if needed */
+.experience-item h4 {
+    margin-bottom: 5px; /* Adjust this value to control spacing */
+}
+
+/* Reduce margin for the list following the company name */
+.experience-item ul {
+    margin-top: 5px; /* Adjust this value as needed */
 }
 
 /* Media Queries for Responsive Design */
