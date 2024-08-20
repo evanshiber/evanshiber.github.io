@@ -98,6 +98,7 @@ footer {
 .resume-section h4 {
     font-size: 1.2em; /* Adjust smaller heading size */
     color: #4CAF50; /* Change the color of h4 elements */
+    white-space: normal;
 }
 
 .resume-section p {
