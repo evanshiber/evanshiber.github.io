@@ -107,7 +107,6 @@ footer {
 /* Ensure the contact links have consistent styling */
 .contact a {
     text-decoration: none; /* Remove underline from links */
-    color: inherit; /* Ensure link color matches text color */
 }
 
 .contact a:hover {
