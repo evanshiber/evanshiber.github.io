@@ -77,7 +77,7 @@ footer {
     border: 1px solid #adc3ff;
     padding: 1rem;
     margin: 1rem auto; /* Center horizontally and add vertical margin */
-    border-radius: 60px; /* Adjust border radius */
+    border-radius: 50px; /* Adjust border radius */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center; /* Center text in resume sections */
     width: 80%; /* Set width to 80% of its container */
