@@ -78,7 +78,7 @@ footer {
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 170px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
     text-align: center; /* Center text in resume sections */
 }
 
