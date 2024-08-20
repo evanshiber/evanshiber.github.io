@@ -94,7 +94,7 @@ footer {
 /* Ensure the contact links have consistent styling */
 .contact a {
     text-decoration: none; /* Remove underline from links */
-/* color: inherit; /* Ensure link color matches text color */
+    color: inherit; /* Ensure link color matches text color */
 }
 
 .contact a:hover {
@@ -122,16 +122,12 @@ footer {
     font-size: 1.1em; /* Adjust paragraph text size */
 }
 
-/* Experience, Projects, Activities, and Skills Items */
-.experience-item,
-.project-item,
-.activity-item {
-    margin-bottom: 1rem;
+/* Experience Items */
+.experience-item {
+    margin-bottom: 1rem; /* Same margin as project and activity items */
 }
 
-.experience-item ul,
-.project-item ul,
-.activity-item ul {
+.experience-item ul {
     margin: 0;
     padding-left: 20px;
     text-align: left; /* Align text left for better readability in lists */
@@ -139,9 +135,7 @@ footer {
 }
 
 /* Increase font size for list items */
-.experience-item li,
-.project-item li,
-.activity-item li {
+.experience-item li {
     font-size: 1.1em; /* Adjust list item size */
 }
 
@@ -153,14 +147,54 @@ footer {
     line-height: 1.2; /* Adjust line-height to control spacing */
 }
 
-/* Add a small margin below h4 if needed */
 .experience-item h4 {
-    margin-bottom: 5px; /* Adjust this value to control spacing */
+    margin-bottom: 5px; /* Add a small margin below h4 if needed */
 }
 
-/* Reduce margin for the list following the company name */
 .experience-item ul {
-    margin-top: 5px; /* Adjust this value as needed */
+    margin-top: 5px; /* Reduce margin for the list following the company name */
+}
+
+/* Projects and Activities Items */
+.project-item,
+.activity-item {
+    margin-bottom: 1rem; /* Same margin as experience items */
+}
+
+/* List inside project and activity items */
+.project-item ul,
+.activity-item ul {
+    margin: 0;
+    padding-left: 20px;
+    text-align: left; /* Align text left for better readability in lists */
+    display: inline-block; /* Keep lists centered */
+}
+
+/* Increase font size for list items */
+.project-item li,
+.activity-item li {
+    font-size: 1.1em; /* Adjust list item size */
+}
+
+/* Adjustments to remove extra space between title and description */
+.project-item h4,
+.activity-item h4 {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2; /* Adjust line-height to control spacing */
+    margin-bottom: 5px; /* Add a small margin below h4 for consistency */
+}
+
+.project-item ul,
+.activity-item ul {
+    margin-top: 5px; /* Ensure the margin-top is consistent */
+}
+
+.custom-line {
+    border: none;           /* Removes default styling */
+    height: 1px;            /* Sets thickness */
+    background-color: #000000; /* Sets color */
+    width: 100%;            /* Optional: controls the width */
 }
 
 /* Media Queries for Responsive Design */
@@ -172,11 +206,4 @@ footer {
     header img.header-image {
         max-width: 150px; /* Adjust the maximum width on smaller screens */
     }
-}
-
-.custom-line {
-    border: none;           /* Removes default styling */
-    height: 1px;            /* Sets thickness */
-    background-color: #000000; /* Sets color */
-    width: 100%;            /* Optional: controls the width */
 }
