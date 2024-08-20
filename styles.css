@@ -40,6 +40,7 @@ header img.header-image {
     height: auto; /* Maintain aspect ratio */
     margin: 1rem auto 0; /* Center the image horizontally and add margin above */
     border-radius: 50%;
+    border: 4px solid, #000 ;
 }
 
 /* Main Content Styling */
