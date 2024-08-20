@@ -19,8 +19,10 @@ header {
     color: white;
     text-align: center;
     padding: 1rem;
-    width: 100vw;  /* Ensure the header extends full width */
+    width: 100%;  /* Ensure the header extends full width */
+    max-width: 1200px; /* Center the header and limit its width */
     box-sizing: border-box;
+    margin: 0 auto; /* Center horizontally */
 }
 
 header h1 {
@@ -40,25 +42,27 @@ header img.header-image {
     height: auto; /* Maintain aspect ratio */
     margin: 1rem auto 0; /* Center the image horizontally and add margin above */
     border-radius: 50%;
-    border: 3px solid #000 ;
+    border: 3px solid #000; /* Corrected border syntax */
 }
 
 /* Main Content Styling */
 main {
     padding: 1rem;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1200px; /* Center the main content and limit its width */
     margin: 0 auto;
 }
 
+/* Footer Styling */
 footer {
     background-color: #4CAF50;
     color: white;
     text-align: center;
     padding: 1rem;
-    margin-top: auto;
-    width: 100vw;  /* Ensure the footer extends full width */
+    width: 100%;  /* Ensure the footer extends full width */
+    max-width: 1200px; /* Center the footer and limit its width */
     box-sizing: border-box;
+    margin: 0 auto; /* Center horizontally */
 }
 
 /* Resume Section Styling */
@@ -103,7 +107,7 @@ footer {
 /* Ensure the contact links have consistent styling */
 .contact a {
     text-decoration: none; /* Remove underline from links */
-/* color: inherit; /* Ensure link color matches text color */
+    color: inherit; /* Ensure link color matches text color */
 }
 
 .contact a:hover {
