@@ -149,7 +149,9 @@ footer {
 .experience-item h4,
 .experience-item p,
 .project-item h4,
-.activity-item h4 {
+.project-item p,
+.activity-item h4,
+.activity-item p {
     margin: 0;
     padding: 0;
     line-height: 1.2; /* Adjust line-height to control spacing */
