@@ -48,8 +48,8 @@ header img.header-image {
 /* Main Content Styling */
 main {
     padding: 1rem;
-    width: 100%;
-    max-width: 1200px; /* Center the main content and limit its width */
+    width: 85%;
+    max-width: 1100px; /* Center the main content and limit its width */
     margin: 0 auto;
 }
 
@@ -68,7 +68,7 @@ footer {
 /* Resume Section Styling */
 .resume-section {
     background-color: white;
-    border: 1px solid #ddd;
+    border: 2px solid #000;
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 8px; /* Default border radius for other sections */
@@ -93,8 +93,8 @@ footer {
     border-radius: 50px; /* Adjust border radius */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center; /* Center text in resume sections */
-    width: 80%; /* Set width to 80% of its container */
-    max-width: 600px; /* Set a maximum width for larger screens */
+    width: 55%; /* Set width to 80% of its container */
+    max-width: 500px; /* Set a maximum width for larger screens */
 }
 
 /* Contact Section Icon Styling */
@@ -117,7 +117,7 @@ footer {
 /* Resume Section Heading Styling */
 .resume-section h2 {
     margin-top: 0;
-    font-size: 2em; /* Adjust section heading size */
+    font-size: 3em; /* Adjust section heading size */
     border-radius: 168px;
 }
 
