@@ -19,7 +19,6 @@ header {
     color: white;
     text-align: center;
     padding: 1rem;
-    position: relative;
     width: 100vw;  /* Ensure the header extends full width */
     box-sizing: border-box;
 }
@@ -39,11 +38,8 @@ header img.header-image {
     max-width: 200px;
     width: 100%; /* Ensure it scales with the container */
     height: auto; /* Maintain aspect ratio */
-    margin: 0 auto; /* Center the image horizontally */
+    margin: 1rem auto 0; /* Center the image horizontally and add margin above */
     border-radius: 50%;
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 2em;
 }
 
 /* Main Content Styling */
