@@ -71,6 +71,14 @@ footer {
     text-align: center; /* Center text in resume sections */
 }
 
+.resume-section .resume-line {
+    border: none; /* Removes default styling */
+    height: 1px; /* Sets thickness */
+    background-color: #000000; /* Sets color */
+    width: 100%; /* Ensures full width */
+    margin: 1rem 0; /* Add margin for spacing above and below */
+}
+
 /* Contact Section Styling */
 .contact {
     background-color: white;
