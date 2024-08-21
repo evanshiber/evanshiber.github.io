@@ -20,7 +20,7 @@ header {
     text-align: center;
     padding: 1rem;
     width: 100%;  /* Ensure the header extends full width */
-    max-width: 1200px; /* Center the header and limit its width */
+    max-width: 10000px; /* Center the header and limit its width */
     box-sizing: border-box;
     margin: 0 auto; /* Center horizontally */
 }
@@ -60,7 +60,7 @@ footer {
     text-align: center;
     padding: 1rem;
     width: 100%;  /* Ensure the footer extends full width */
-    max-width: 1200px; /* Center the footer and limit its width */
+    max-width: 10000px; /* Center the footer and limit its width */
     box-sizing: border-box;
     margin: 0 auto; /* Center horizontally */
 }
