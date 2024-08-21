@@ -1,17 +1,14 @@
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #fff;
 }
-
 header {
     background-color: #000;
     color: #fff;
     padding: 30px 0;
 }
-
 nav ul {
     list-style: none;
     display: flex;
@@ -21,33 +18,27 @@ nav ul {
     padding: 0;
     margin: 0;
 }
-
 nav li {
     margin: 0 20px;
 }
-
 nav a {
     text-decoration: none;
     color: #fff;
 }
-
 img {
     max-width: 100%;
 }
-
 footer {
     text-align: center;
     padding: 20px;
     background-color: #fff;
     color: #000;
 }
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px;
 }
-
 .project {
     margin-bottom: 40px;
     border: 6px solid #fff;
@@ -57,13 +48,11 @@ footer {
     align-items: center;
     text-align: center;
 }
-
 .projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
-
 .about-container {
     display: flex;
     align-items: center;
@@ -71,31 +60,21 @@ footer {
     margin-bottom: -30px; /* Use negative margin to further decrease space below the about section */
     margin-top: 30px; /* Increase space above the about section */
 }
-
 .about-text {
-    max-width: 620px;
+    max-width: 600px;
 }
-
 .about-text h1 {
     font-size: 3em;
     margin-bottom: 0px;
 }
-
-.about-text h2 {
-    font-size: 2em;
-    margin-bottom: 0px;
-}
-
 .about-text p {
     font-size: 1.2em;
-    margin-bottom: 0px;
+    margin-bottom: 45px;
 }
-
 .about-text p .light-text {
     font-weight: 300;
     font-style: italic;
 }
-
 .skills-container {
     display: grid;
     grid-template-columns: 1fr 1fr; /* 2 columns */
@@ -109,13 +88,11 @@ footer {
     margin-top: -10px; /* Use negative margin to further decrease space above the skills section */
     margin-bottom: 60px; /* Increase space below the skills section */
 }
-
 .skills-container h2 {
     grid-column: span 2; /* Make the header span both columns */
-    margin-bottom: 20px; /* Add some space below the header */
+    margin-bottom: 10px; /* Decrease space between title and grid */
     font-size: 2.5em;
 }
-
 .skills {
     padding: 40px; /* Increase padding for larger size */
     display: flex;
@@ -129,26 +106,37 @@ footer {
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
     margin: 10px 0; /* Add vertical margin to prevent overlap */
 }
-
 .skill-category {
     font-size: 1.2em;
     margin-bottom: 10px;
 }
-
 /* Media query for mobile devices */
 @media (max-width: 768px) {
     .skills-container {
         grid-template-columns: 1fr; /* Single column layout */
         grid-template-rows: auto; /* Adjust rows automatically */
     }
-
     .skills-container h2 {
         grid-column: span 1; /* Header spans single column */
     }
-
     .skills {
         height: auto; /* Adjust height for mobile */
         padding: 20px; /* Adjust padding for mobile */
+    }
+    .container {
+        padding: 20px;
+    }
+    .project {
+        padding: 20px;
+    }
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+    .about-text h1 {
+        font-size: 1.5em;
+    }
+    .about-text p {
+        font-size: 1em;
     }
 }
 .contact {
@@ -162,7 +150,6 @@ footer {
     list-style: none;
     padding: 20px;
 }
-
 .contact li {
     font-size: 1.2em;
     margin-bottom: 10px;
@@ -172,34 +159,29 @@ footer {
     width: auto;
     margin-left: -15px;
 }
-
 .contact li i {
     margin-right: 10px;
 }
-
 .contact a {
     text-decoration: none;
     color: inherit;
 }
-
 .inverse-section {
+    padding-top: 40px;
     background-color: black;
     color: white;
-    padding: 40px 0;
+    padding: 100px 0;
 }
-
 .hero--section--title {
     font-size: 2em;
     color: black;
 }
-
 .typed-cursor--blink {
     font-weight: 100;
     font-size: 1.25em;
     color: black;
     animation: blink 0.7s infinite;
 }
-
 @keyframes blink {
     0%, 100% {
         opacity: 1;
@@ -208,7 +190,6 @@ footer {
         opacity: 0;
     }
 }
-
 .profile-photo {
     width: 300px;
     height: 300px;
@@ -217,15 +198,13 @@ footer {
     border: 4px solid #000;
     object-fit: cover;
 }
-
 .full-screen-section {
     background-color: white;
     color: black;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 0;
-    padding: 65px 0;
+    margin-bottom: 60px; /* Increase space below the full-screen section */
 }
 .contact-container {
     display: grid;
@@ -233,11 +212,9 @@ footer {
     gap: 20px;
     text-align: center; /* Center-align the text */
 }
-
 .contact-container h2 {
     margin-bottom: 0px; /* Reduce space between h2 and ul */
 }
-
 .contact {
     margin-bottom: 40px; /* Increased space between sections */
     border: 6px solid #fff;
@@ -249,58 +226,46 @@ footer {
     list-style: none; /* Remove default list styling */
     padding: 0; /* Remove default padding */
 }
-
 /* Media query for mobile devices */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
         align-items: center;
     }
-
     nav li {
         margin: 10px 0;
     }
-
     .about-container {
         flex-direction: column;
         text-align: center;
     }
-
     .profile-photo {
         margin-right: 0;
         margin-bottom: 20px;
     }
-
     .skills-container {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
-
     .skills-container h2 {
         grid-column: span 1;
     }
-
     .skills {
         height: auto;
         padding: 20px;
     }
-
     .container {
         padding: 20px;
     }
-
     .project {
         padding: 20px;
     }
-
     .projects-container {
         grid-template-columns: 1fr;
     }
-
     .about-text h1 {
         font-size: 1.5em;
     }
-
     .about-text p {
         font-size: 1em;
     }
