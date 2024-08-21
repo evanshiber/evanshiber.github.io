@@ -83,17 +83,20 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
-.project i.fa-java, 
-.project i.fa-git-alt {
-    font-size: 60px; /* Adjust the size of the icons */
-    color: #f89820; /* Optional: Change the color to match Java's orange */
-    vertical-align: middle; /* Align the icons in the middle of the text line */
-    margin-right: 10px; /* Add space between icons */
+.project i {
+    display: inline-block; /* Ensures that the icons stay on the same line */
+    font-size: 60px; /* Adjusts the size of the icons */
+    vertical-align: middle; /* Aligns icons vertically to the middle */
+    margin-right: 10px; /* Adds spacing between the icons */
+}
+
+.project i.fa-java {
+    color: #f89820; /* Java orange color */
 }
 
 .project i.fa-git-alt {
-    color: #F1502F; /* Change the color to Git's red */
-    margin-right: 0; /* Remove right margin for the last icon */
+    color: #F1502F; /* Git red color */
+    margin-right: 0; /* No right margin for the last icon */
 }
 
 .about-container {
