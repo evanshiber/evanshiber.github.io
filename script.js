@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         document.querySelector('.hero--section--title span').textContent = letter;
 
-        let typeSpeed = 200;
+        let typeSpeed = 300;
         if (isDeleting) {
             typeSpeed /= 4; // Speed up when deleting
         }
