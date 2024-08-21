@@ -1,56 +1,114 @@
-/* Main Layout and General Styling */
+/* Reset and Base Styles */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center all content horizontally */
-    justify-content: center; /* Center all content vertically */
-    min-height: 100vh;
-    font-size: 18px; /* Adjust base font size */
-    text-align: center; /* Center all text horizontally */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* Header Styling */
 header {
+    display: flex;
+    justify-content: space-between; /* Distribute space between header sections */
+    align-items: center; /* Center items vertically */
     background-color: #4CAF50;
     color: white;
-    text-align: center;
     padding: 1rem;
-    width: 100%;  /* Ensure the header extends full width */
-    max-width: 10000px; /* Center the header and limit its width */
+    width: 100%;
+    max-width: 10000px;
     box-sizing: border-box;
-    margin: 0 auto; /* Center horizontally */
+    margin: 0 auto;
 }
 
-header h1 {
+.header-left {
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+.header-left h1 {
     margin: 0;
     font-size: 2.5em; /* Adjust heading size */
 }
 
-header p {
+.header-left p {
     margin: 0;
     font-size: 1.2em; /* Adjust subheading size */
 }
 
-header img.header-image {
+.header-left img.header-image {
     display: block;
     max-width: 250px;
     width: 100%; /* Ensure it scales with the container */
     height: auto; /* Maintain aspect ratio */
     margin: 1rem auto 0; /* Center the image horizontally and add margin above */
     border-radius: 50%;
-    border: 3px solid #000; /* Corrected border syntax */
+    border: 3px solid #000;
+}
+
+.header-right {
+    text-align: right; /* Align text to the right */
+}
+
+.contact {
+    display: inline-block; /* Make contact section fit its content */
+    background-color: white;
+    border: 1px solid #adc3ff;
+    padding: 1rem;
+    margin: 0;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: auto; /* Fit width to content */
+    max-width: none; /* Remove the max-width restriction */
+}
+
+.contact i {
+    margin-right: 0.5rem;
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+.contact a {
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
 }
 
 /* Main Content Styling */
 main {
-    padding: 1rem;
-    width: 85%;
-    max-width: 1100px; /* Center the main content and limit its width */
-    margin: 0 auto;
+    padding: 2rem;
+}
+
+.resume-section {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.resume-section h2 {
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 0.5rem;
+}
+
+.resume-line,
+.custom-line {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 1rem 0;
+}
+
+/* Experience and Project Items */
+.experience-item,
+.project-item,
+.activity-item {
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 0.5rem;
 }
 
 /* Footer Styling */
@@ -59,142 +117,26 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
-    width: 100%;  /* Ensure the footer extends full width */
-    max-width: 10000px; /* Center the footer and limit its width */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     box-sizing: border-box;
-    margin: 0 auto; /* Center horizontally */
 }
 
-/* Resume Section Styling */
-.resume-section {
-    background-color: white;
-    border: 1px solid #000;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 8px; /* Default border radius for other sections */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Center text in resume sections */
-}
-
-.resume-section .resume-line {
-    border: none; /* Removes default styling */
-    height: 3px; /* Sets thickness */
-    background-color: #4CAF50; /* Sets color */
-    width: 100%; /* Ensures full width */
-    margin: 1rem 0; /* Add margin for spacing above and below */
-}
-
-/* Contact Section Styling */
-.contact {
-    background-color: white;
-    border: 1px solid #adc3ff;
-    padding: 1rem;
-    margin: 1rem auto; /* Center horizontally and add vertical margin */
-    border-radius: 50px; /* Adjust border radius */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center; /* Center text in resume sections */
-    width: 55%; /* Set width to 80% of its container */
-    max-width: 500px; /* Set a maximum width for larger screens */
-}
-
-/* Contact Section Icon Styling */
-.contact i {
-    margin-right: 0.5rem; /* Space between icon and text */
-    font-size: 1.2em; /* Adjust icon size to match the design */
-    vertical-align: middle; /* Align icons with text vertically */
-}
-
-/* Ensure the contact links have consistent styling */
-.contact a {
-    text-decoration: none; /* Remove underline from links */
-}
-
-.contact a:hover {
-    text-decoration: underline; /* Underline on hover for better visibility */
-}
-
-/* Resume Section Heading Styling */
-.resume-section h2 {
-    margin-top: 0;
-    font-size: 2em; /* Adjust section heading size */
-    border-radius: 168px;
-}
-
-.resume-section h3 {
-    font-size: 1.5em; /* Adjust subsection heading size */
-}
-
-.resume-section h4 {
-    font-size: 1.2em; /* Adjust smaller heading size */
-    color: #4CAF50; /* Change the color of h4 elements */
-    white-space: normal;
-}
-
-.resume-section p {
-    font-size: 1.1em; /* Adjust paragraph text size */
-}
-
-/* Experience Items */
-.experience-item,
-.project-item,
-.activity-item {
-    margin-bottom: 1rem; /* Same margin as project and activity items */
-}
-
-.experience-item ul,
-.project-item ul,
-.activity-item ul {
-    margin: 0;
-    padding-left: 20px;
-    text-align: left; /* Align text left for better readability in lists */
-    display: inline-block; /* Keep lists centered */
-}
-
-/* Increase font size for list items */
-.experience-item li,
-.project-item li,
-.activity-item li {
-    font-size: 1.1em; /* Adjust list item size */
-}
-
-/* Adjustments to remove extra space between job title and company name */
-.experience-item h4,
-.experience-item p,
-.project-item h4,
-.project-item p,
-.activity-item h4,
-.activity-item p {
-    margin: 0;
-    padding: 0;
-    line-height: 1.2; /* Adjust line-height to control spacing */
-}
-
-.experience-item h4,
-.project-item h4,
-.activity-item h4 {
-    margin-bottom: 5px; /* Add a small margin below h4 if needed */
-}
-
-.experience-item ul,
-.project-item ul,
-.activity-item ul {
-    margin-top: 5px; /* Reduce margin for the list following the company name */
-}
-
-.custom-line {
-    border: none;           /* Removes default styling */
-    height: 1px;            /* Sets thickness */
-    background-color: #000000; /* Sets color */
-    width: 100%;            /* Optional: controls the width */
-}
-
-/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-    body {
-        font-size: 16px; /* Adjust font size on smaller screens if needed */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    header img.header-image {
-        max-width: 150px; /* Adjust the maximum width on smaller screens */
+    .header-left,
+    .header-right {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .contact {
+        text-align: left;
+        margin-top: 1rem;
     }
 }
