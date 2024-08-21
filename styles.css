@@ -83,6 +83,11 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
+.project i.fa-java {
+    font-size: 24px; /* Adjust the size of the icon */
+    color: #f89820; /* Optional: Change the color to Java's orange */
+    margin-top: 10px; /* Add some space above the icon */
+}
 .about-container {
     display: flex;
     align-items: center;
