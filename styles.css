@@ -1,124 +1,193 @@
-/* Reset default margin and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* General body styling */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #fff;
 }
 
-/* Header styling */
 header {
-    background-color: #333;
+    background-color: #000;
     color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    padding: 10px 0;
 }
 
-header h1 {
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
     margin: 0;
-    font-size: 2.5em;
 }
 
-header p {
-    margin: 10px 0 0;
-    font-size: 1.2em;
+nav li {
+    margin: 0 20px;
 }
 
-.header-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-top: 20px;
+nav a {
+    text-decoration: none;
+    color: #fff;
 }
 
-/* Main content styling */
-main {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+img {
+    max-width: 100%;
 }
 
-section {
-    margin-bottom: 40px;
-}
-
-/* Contact section styling */
-.contact h2 {
-    margin-bottom: 10px;
-}
-
-.contact p {
-    margin: 5px 0;
-}
-
-/* Resume section styling */
-.resume-section h2 {
-    margin-bottom: 10px;
-    font-size: 1.8em;
-}
-
-.resume-section h3 {
-    margin-top: 20px;
-    font-size: 1.5em;
-}
-
-.resume-section h4 {
-    margin: 15px 0 5px;
-    font-size: 1.3em;
-}
-
-.resume-section p {
-    margin: 5px 0;
-}
-
-.experience-item,
-.project-item,
-.activity-item {
-    margin-bottom: 20px;
-}
-
-ul {
-    margin-left: 20px;
-    list-style-type: disc;
-}
-
-hr.custom-line {
-    margin: 20px 0;
-    border: none;
-    border-top: 2px solid #ccc;
-}
-
-hr.resume-line {
-    margin: 20px 0;
-    border: none;
-    border-top: 3px solid #666;
-}
-
-/* Hero section styling */
-.hero--section {
+footer {
     text-align: center;
-    margin: 40px 0;
+    padding: 20px;
+    background-color: #fff;
+    color: #000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.project {
+    margin-bottom: 40px;
+    border: 6px solid #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h1 {
+    font-size: 2em;
+    margin-bottom: 0px;
+}
+
+.about-text p {
+    font-size: 1.2em;
+    margin-bottom: 0px;
+}
+
+.about-text p .light-text {
+    font-weight: 300;
+    font-style: italic;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    grid-template-rows: auto auto; /* 2 rows */
+    column-gap: 50px;
+    row-gap: 50px; /* Add some row gap for spacing */
+    text-align: center; /* Center-align the text */
+    width: 100%; /* Use full width of the container */
+    padding: 0 20px; /* Add padding to the sides */
+    box-sizing: border-box; /* Include padding in the element's total width */
+}
+
+.skills-container h2 {
+    grid-column: span 2; /* Make the header span both columns */
+    margin-bottom: 20px; /* Add some space below the header */
+}
+
+.skills {
+    padding: 40px; /* Increase padding for larger size */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    width: 100%; /* Ensure it spans the full width */
+    height: 200px; /* Set a fixed height for the squares */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    border: 2px solid black; /* Add black outline */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin: 10px 0; /* Add vertical margin to prevent overlap */
+}
+
+.skill-category {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-rows: auto; /* Adjust rows automatically */
+    }
+
+    .skills-container h2 {
+        grid-column: span 1; /* Header spans single column */
+    }
+
+    .skills {
+        height: auto; /* Adjust height for mobile */
+        padding: 20px; /* Adjust padding for mobile */
+    }
+}
+.contact {
+    margin-bottom: 40px;
+    border: 6px solid #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    padding: 20px;
+}
+
+.contact li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    margin-left: -15px;
+}
+
+.contact li i {
+    margin-right: 10px;
+}
+
+.contact a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.inverse-section {
+    background-color: black;
+    color: white;
+    padding: 40px 0;
 }
 
 .hero--section--title {
     font-size: 2em;
-    font-weight: bold;
+    color: black;
 }
 
-.hero--section--title span {
-    display: inline-block;
+.typed-cursor--blink {
+    font-weight: 100;
+    font-size: 1.25em;
+    color: black;
+    animation: blink 0.7s infinite;
 }
 
-/* Blinking cursor animation */
 @keyframes blink {
     0%, 100% {
         opacity: 1;
@@ -128,47 +197,99 @@ hr.resume-line {
     }
 }
 
-.typed-cursor--blink {
-    animation: blink 1s step-end infinite;
+.profile-photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-right: 80px;
+    border: 4px solid #000;
+    object-fit: cover;
 }
 
-/* Footer styling */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    right: 0;
+.full-screen-section {
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    padding: 65px 0;
+}
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 20px;
+    text-align: center; /* Center-align the text */
 }
 
-footer p {
-    margin: 0;
+.contact-container h2 {
+    margin-bottom: 0px; /* Reduce space between h2 and ul */
 }
 
-/* Responsive design */
+.contact {
+    margin-bottom: 40px; /* Increased space between sections */
+    border: 6px solid #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ensure it spans the full width */
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+/* Media query for mobile devices */
 @media (max-width: 768px) {
-    .header-image {
-        width: 100px;
-        height: 100px;
+    nav ul {
+        flex-direction: column;
+        align-items: center;
     }
 
-    header h1 {
-        font-size: 2em;
+    nav li {
+        margin: 10px 0;
     }
 
-    header p {
-        font-size: 1em;
+    .about-container {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .hero--section--title {
+    .profile-photo {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .skills-container h2 {
+        grid-column: span 1;
+    }
+
+    .skills {
+        height: auto;
+        padding: 20px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .project {
+        padding: 20px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-text h1 {
         font-size: 1.5em;
     }
 
-    main {
-        padding: 15px;
+    .about-text p {
+        font-size: 1em;
     }
 }
