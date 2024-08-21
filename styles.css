@@ -113,6 +113,7 @@ footer {
 .skills-container h2 {
     grid-column: span 2; /* Make the header span both columns */
     margin-bottom: 20px; /* Add some space below the header */
+    font-size: 2.5em;
 }
 
 .skills {
