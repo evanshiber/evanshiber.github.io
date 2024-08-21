@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const texts = ["Cybersecurity", "Network Security", "Software Enthusiast"];
+    const texts = ["Software Engineer", "Fullstack Developer", "JavaScript Enthusiast"];
     let count = 0;
     let index = 0;
     let currentText = '';
@@ -11,16 +11,14 @@ document.addEventListener('DOMContentLoaded', function() {
             count = 0;
         }
         currentText = texts[count];
-        console.log('Current Text:', currentText); // Debugging
 
         if (isDeleting) {
             // Deleting characters
+            console.log('Deleting characters');
             letter = currentText.slice(0, --index);
-            console.log('Deleting:', letter); // Debugging
         } else {
             // Typing characters
             letter = currentText.slice(0, ++index);
-            console.log('Typing:', letter); // Debugging
         }
 
         document.querySelector('.hero--section--title span').textContent = letter;
@@ -32,12 +30,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (!isDeleting && letter.length === currentText.length) {
             // Pause before starting to delete
+            console.log('Pausing before starting to delete');
             setTimeout(() => {
                 isDeleting = true;
                 type();
             }, 2000);
         } else if (isDeleting && letter.length === 0) {
             // Pause before typing the next text
+            console.log('Pausing before typing the next text');
             isDeleting = false;
             count++;
             setTimeout(type, 500);
