@@ -86,14 +86,16 @@ footer {
 .project i.fa-java, 
 .project i.fa-git-alt {
     font-size: 60px; /* Adjust the size of the icons */
-    margin-right: 10px; /* Add space between icons */
     color: #f89820; /* Optional: Change the color to match Java's orange */
+    vertical-align: middle; /* Align the icons in the middle of the text line */
+    margin-right: 10px; /* Add space between icons */
 }
 
 .project i.fa-git-alt {
-    color: #F1502F; /* Optional: Change the color to Git's red */
+    color: #F1502F; /* Change the color to Git's red */
     margin-right: 0; /* Remove right margin for the last icon */
 }
+
 .about-container {
     display: flex;
     align-items: center;
