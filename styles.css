@@ -4,30 +4,60 @@ body {
     padding: 0;
     background-color: #fff;
 }
+
 header {
     background-color: #000;
     color: #fff;
-    padding: 46px 0;
+    padding: 0; /* Remove padding from header */
+    height: 113px; /* Set fixed height for header */
+    position: relative; /* Set position to relative to contain absolutely positioned children */
 }
+
 nav ul {
     list-style: none;
-    display: flex;
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Divide evenly */
     font-weight: bold;
     font-size: larger;
-    justify-content: center;
     padding: 0;
     margin: 0;
+    width: 100%; /* Ensure it spans the full width */
+    height: 100%; /* Ensure it spans the full height */
+    position: absolute; /* Position absolutely within the header */
+    top: 0;
+    left: 0;
 }
+
 nav li {
-    margin: 0 20px;
+    margin: 0;
+    text-align: center; /* Center-align the text */
+    display: flex; /* Use flex layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
 }
+
 nav a {
     text-decoration: none;
     color: #fff;
+    display: flex; /* Use flex layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    width: 100%; /* Ensure the link spans the full width of the li */
+    height: 100%; /* Ensure the link spans the full height of the li */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
+
+nav a:hover {
+    background-color: #fff;
+    color: #000;
+    border: 4px solid #000; /* Add black outline */
+}
+
 img {
     max-width: 100%;
 }
+
 footer {
     text-align: center;
     padding: 20px;
