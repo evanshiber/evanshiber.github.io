@@ -1,200 +1,174 @@
-/* Main Layout and General Styling */
-body {
-    font-family: Arial, sans-serif;
+/* Reset default margin and padding */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center all content horizontally */
-    justify-content: center; /* Center all content vertically */
-    min-height: 100vh;
-    font-size: 18px; /* Adjust base font size */
-    text-align: center; /* Center all text horizontally */
+    box-sizing: border-box;
 }
 
-/* Header Styling */
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
 header {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
-    padding: 1rem;
-    width: 100%;  /* Ensure the header extends full width */
-    max-width: 10000px; /* Center the header and limit its width */
-    box-sizing: border-box;
-    margin: 0 auto; /* Center horizontally */
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em; /* Adjust heading size */
+    font-size: 2.5em;
 }
 
 header p {
-    margin: 0;
-    font-size: 1.2em; /* Adjust subheading size */
+    margin: 10px 0 0;
+    font-size: 1.2em;
 }
 
-header img.header-image {
-    display: block;
-    max-width: 250px;
-    width: 100%; /* Ensure it scales with the container */
-    height: auto; /* Maintain aspect ratio */
-    margin: 1rem auto 0; /* Center the image horizontally and add margin above */
+.header-image {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    border: 3px solid #000; /* Corrected border syntax */
+    margin-top: 20px;
 }
 
-/* Main Content Styling */
+/* Main content styling */
 main {
-    padding: 1rem;
-    width: 85%;
-    max-width: 1100px; /* Center the main content and limit its width */
+    padding: 20px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
-/* Footer Styling */
-footer {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    width: 100%;  /* Ensure the footer extends full width */
-    max-width: 10000px; /* Center the footer and limit its width */
-    box-sizing: border-box;
-    margin: 0 auto; /* Center horizontally */
+section {
+    margin-bottom: 40px;
 }
 
-/* Resume Section Styling */
-.resume-section {
-    background-color: white;
-    border: 1px solid #000;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 8px; /* Default border radius for other sections */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Center text in resume sections */
+/* Contact section styling */
+.contact h2 {
+    margin-bottom: 10px;
 }
 
-.resume-section .resume-line {
-    border: none; /* Removes default styling */
-    height: 3px; /* Sets thickness */
-    background-color: #4CAF50; /* Sets color */
-    width: 100%; /* Ensures full width */
-    margin: 1rem 0; /* Add margin for spacing above and below */
+.contact p {
+    margin: 5px 0;
 }
 
-/* Contact Section Styling */
-.contact {
-    background-color: white;
-    border: 1px solid #adc3ff;
-    padding: 1rem;
-    margin: 1rem auto; /* Center horizontally and add vertical margin */
-    border-radius: 50px; /* Adjust border radius */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center; /* Center text in resume sections */
-    width: 55%; /* Set width to 80% of its container */
-    max-width: 500px; /* Set a maximum width for larger screens */
-}
-
-/* Contact Section Icon Styling */
-.contact i {
-    margin-right: 0.5rem; /* Space between icon and text */
-    font-size: 1.2em; /* Adjust icon size to match the design */
-    vertical-align: middle; /* Align icons with text vertically */
-}
-
-/* Ensure the contact links have consistent styling */
-.contact a {
-    text-decoration: none; /* Remove underline from links */
-}
-
-.contact a:hover {
-    text-decoration: underline; /* Underline on hover for better visibility */
-}
-
-/* Resume Section Heading Styling */
+/* Resume section styling */
 .resume-section h2 {
-    margin-top: 0;
-    font-size: 2em; /* Adjust section heading size */
-    border-radius: 168px;
+    margin-bottom: 10px;
+    font-size: 1.8em;
 }
 
 .resume-section h3 {
-    font-size: 1.5em; /* Adjust subsection heading size */
+    margin-top: 20px;
+    font-size: 1.5em;
 }
 
 .resume-section h4 {
-    font-size: 1.2em; /* Adjust smaller heading size */
-    color: #4CAF50; /* Change the color of h4 elements */
-    white-space: normal;
+    margin: 15px 0 5px;
+    font-size: 1.3em;
 }
 
 .resume-section p {
-    font-size: 1.1em; /* Adjust paragraph text size */
+    margin: 5px 0;
 }
 
-/* Experience Items */
 .experience-item,
 .project-item,
 .activity-item {
-    margin-bottom: 1rem; /* Same margin as project and activity items */
+    margin-bottom: 20px;
 }
 
-.experience-item ul,
-.project-item ul,
-.activity-item ul {
+ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+hr.custom-line {
+    margin: 20px 0;
+    border: none;
+    border-top: 2px solid #ccc;
+}
+
+hr.resume-line {
+    margin: 20px 0;
+    border: none;
+    border-top: 3px solid #666;
+}
+
+/* Hero section styling */
+.hero--section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.hero--section--title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.hero--section--title span {
+    display: inline-block;
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.typed-cursor--blink {
+    animation: blink 1s step-end infinite;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+footer p {
     margin: 0;
-    padding-left: 20px;
-    text-align: left; /* Align text left for better readability in lists */
-    display: inline-block; /* Keep lists centered */
 }
 
-/* Increase font size for list items */
-.experience-item li,
-.project-item li,
-.activity-item li {
-    font-size: 1.1em; /* Adjust list item size */
-}
-
-/* Adjustments to remove extra space between job title and company name */
-.experience-item h4,
-.experience-item p,
-.project-item h4,
-.project-item p,
-.activity-item h4,
-.activity-item p {
-    margin: 0;
-    padding: 0;
-    line-height: 1.2; /* Adjust line-height to control spacing */
-}
-
-.experience-item h4,
-.project-item h4,
-.activity-item h4 {
-    margin-bottom: 5px; /* Add a small margin below h4 if needed */
-}
-
-.experience-item ul,
-.project-item ul,
-.activity-item ul {
-    margin-top: 5px; /* Reduce margin for the list following the company name */
-}
-
-.custom-line {
-    border: none;           /* Removes default styling */
-    height: 1px;            /* Sets thickness */
-    background-color: #000000; /* Sets color */
-    width: 100%;            /* Optional: controls the width */
-}
-
-/* Media Queries for Responsive Design */
+/* Responsive design */
 @media (max-width: 768px) {
-    body {
-        font-size: 16px; /* Adjust font size on smaller screens if needed */
+    .header-image {
+        width: 100px;
+        height: 100px;
     }
 
-    header img.header-image {
-        max-width: 150px; /* Adjust the maximum width on smaller screens */
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .hero--section--title {
+        font-size: 1.5em;
+    }
+
+    main {
+        padding: 15px;
     }
 }
