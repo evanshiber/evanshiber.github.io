@@ -68,6 +68,7 @@ footer {
     display: flex;
     align-items: center;
     gap: 0px;
+    margin-top: 30px; /* Increase space above the about section */
 }
 
 .about-text {
@@ -104,6 +105,8 @@ footer {
     width: 100%; /* Use full width of the container */
     padding: 0 20px; /* Add padding to the sides */
     box-sizing: border-box; /* Include padding in the element's total width */
+    margin-top: -40px; /* Use negative margin to further decrease space above the skills section */
+    margin-bottom: 60px; /* Increase space below the skills section */
 }
 
 .skills-container h2 {
