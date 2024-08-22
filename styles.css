@@ -299,7 +299,7 @@ footer {
     border: 3px solid #000;
     border-radius: 80%; /* Makes the border circular */
     overflow: hidden; /* Ensures content stays within the circle */
-    margin: 80px auto; /* Center horizontally */
+    margin: 40px auto; /* Center horizontally */
     padding: 45px; /* Padding inside the circle */
     background-color: #ffffff; /* Background color inside the circle */
     text-align: center;
