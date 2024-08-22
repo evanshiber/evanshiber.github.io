@@ -127,6 +127,20 @@ footer {
     font-weight: 300;
     font-style: italic;
 }
+.project img {
+    display: inline-block; /* Ensures that the icons stay on the same line */
+    height: 60px; /* Adjust the size to match the font-awesome icons */
+    vertical-align: middle; /* Aligns icons vertically to the middle */
+    margin-right: 10px; /* Adds spacing between the icons */
+}
+
+/* Specific style for the CI/CD icon if needed */
+.project .CI\/CD\ Icon {
+    width: 60px; /* Ensure the icon is the same height as others */
+    height: 60px; /* Ensure the icon is the same height as others */
+    margin-right: 10px; /* Space between icons */
+    vertical-align: middle; /* Aligns icons vertically to the middle */
+}
 .skills-container {
     display: grid;
     grid-template-columns: 1fr 1fr; /* 2 columns */
