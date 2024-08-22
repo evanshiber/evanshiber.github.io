@@ -86,7 +86,8 @@ footer {
 .project .icons {
     display: flex; /* Use flex to place icons on the same line */
     align-items: center; /* Align icons vertically in the center */
-    margin-bottom: 10px; /* Add space below the icons */
+    margin-bottom: 2px; /* Add space below the icons */
+    max-height: 100px;
 }
 
 .project i {
@@ -127,19 +128,25 @@ footer {
     font-weight: 300;
     font-style: italic;
 }
-.Project-icon {
+.project-thumbnail {
     display: inline-block; /* Ensures that the icons stay on the same line */
     height: 200px; /* Adjust the size to match the font-awesome icons */
     vertical-align: middle; /* Aligns icons vertically to the middle */
     margin-right: 10px; /* Adds spacing between the icons */
+    padding: 8px;
 }
-
+/* styles.css */
+.project-icon {
+    height: 60px;
+    width: 60px;
+    padding: 2px;
+}
 /* Specific style for the CI/CD icon if needed */
 .CI-CD-icon {
-    width: 60px; /* Adjusted width for the CI/CD icon */
-    height: 60px; /* Adjusted height for the CI/CD icon */
-    margin-right: 10px; /* Space between icons */
+    width: 100px; /* Adjusted width for the CI/CD icon */
+    height: 75px; /* Adjusted height for the CI/CD icon */
     vertical-align: middle; /* Aligns icons vertically to the middle */
+    padding-bottom: 6px;
 }
 
 .skills-container {
