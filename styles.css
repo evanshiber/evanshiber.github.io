@@ -72,6 +72,7 @@ footer {
 .project {
     margin-bottom: 40px;
     border: 6px solid #fff;
+    border-radius: 4px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -99,11 +100,13 @@ footer {
 
 .project i.fa-java {
     color: #f89820; /* Java orange color */
+    font-size: 50px;
 }
 
 .project i.fa-git-alt {
     color: #F1502F; /* Git red color */
     margin-right: 0; /* No right margin for the last icon */
+    font-size: 55px;
 }
 
 .about-container {
@@ -137,10 +140,10 @@ footer {
 }
 /* Postman icon */
 .project-icon {
-    height: 50px;
-    width: 50px;
+    height: 55px;
+    width: 55px;
     padding: 2px;
-}
+} 
 /* Specific style for the CI/CD icon if needed */
 .CI-CD-icon {
     width: 100px; /* Adjusted width for the CI/CD icon */
@@ -232,6 +235,11 @@ footer {
     justify-content: center;
     width: auto;
     margin-left: -15px;
+
+    /*padding: 15px; /* Padding inside each list item for space around the text */
+    /*border: 2px solid #000; /* Inner border around each list item */
+    /*border-radius: 345px; /* Optional: Add rounded corners */
+    
 }
 .contact li i {
     margin-right: 10px;
@@ -240,11 +248,14 @@ footer {
     text-decoration: none;
     color: rgb(0, 0, 238);
 }
+
+/* Projects Section Background*/
 .inverse-section {
     padding-top: 40px;
     background-color: black;
     color: white;
     padding: 100px 0;
+
 }
 .hero--section--title {
     font-size: 2em;
@@ -280,25 +291,30 @@ footer {
     justify-content: center;
     margin-bottom: 60px; /* Increase space below the full-screen section */
 }
+
 .contact-container {
-    display: grid;
-    grid-template-columns: 1fr; /* Single column layout */
-    gap: 20px;
-    text-align: center; /* Center-align the text */
+    position: relative;
+    width: 350px; /* Adjust to your preferred size */
+    height: 160px; /* Adjust to your preferred size */
+    border: 3px solid #000;
+    border-radius: 80%; /* Makes the border circular */
+    overflow: hidden; /* Ensures content stays within the circle */
+    margin: 80px auto; /* Center horizontally */
+    padding: 45px; /* Padding inside the circle */
+    background-color: #ffffff; /* Background color inside the circle */
+    text-align: center;
 }
+
+/* Contaction Section Title */
 .contact-container h2 {
-    margin-bottom: 0px; /* Reduce space between h2 and ul */
+    margin: 0;
+    margin-bottom: 30px;
 }
+
 .contact {
-    margin-bottom: 40px; /* Increased space between sections */
-    border: 6px solid #fff;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%; /* Ensure it spans the full width */
-    list-style: none; /* Remove default list styling */
-    padding: 0; /* Remove default padding */
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 /* Media query for mobile devices */
