@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         document.querySelector('.hero--section--title span').textContent = letter;
 
-        let typeSpeed = 65;
+        let typeSpeed = 60;
         if (isDeleting) {
             typeSpeed /= 3; // Speed up when deleting
         }
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 isDeleting = true;
                 type();
-            }, 2000);
+            }, 1000);
         } else if (isDeleting && letter.length === 0) {
             // Pause before typing the next text
             console.log('Pausing before typing the next text');

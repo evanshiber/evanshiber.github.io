@@ -135,10 +135,10 @@ footer {
     margin-right: 10px; /* Adds spacing between the icons */
     padding: 8px;
 }
-/* styles.css */
+/* Postman icon */
 .project-icon {
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     padding: 2px;
 }
 /* Specific style for the CI/CD icon if needed */
