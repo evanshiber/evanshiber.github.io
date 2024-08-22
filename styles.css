@@ -127,7 +127,7 @@ footer {
     font-weight: 300;
     font-style: italic;
 }
-.project img {
+.Project-icon {
     display: inline-block; /* Ensures that the icons stay on the same line */
     height: 200px; /* Adjust the size to match the font-awesome icons */
     vertical-align: middle; /* Aligns icons vertically to the middle */
