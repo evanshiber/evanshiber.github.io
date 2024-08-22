@@ -83,6 +83,12 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
+.project .icons {
+    display: flex; /* Use flex to place icons on the same line */
+    align-items: center; /* Align icons vertically in the center */
+    margin-bottom: 10px; /* Add space below the icons */
+}
+
 .project i {
     display: inline-block; /* Ensures that the icons stay on the same line */
     font-size: 60px; /* Adjusts the size of the icons */
