@@ -136,11 +136,10 @@ footer {
 
 /* Specific style for the CI/CD icon if needed */
 .project .CI\/CD\ Icon {
-    width: 60px; /* Ensure the icon is the same height as others */
-    height: 60px; /* Ensure the icon is the same height as others */
+    width: 20px; /* Ensure the icon is the same height as others */
+    height: 20px; /* Ensure the icon is the same height as others */
     margin-right: 10px; /* Space between icons */
     vertical-align: middle; /* Aligns icons vertically to the middle */
-    max-width: 18px;
 }
 .skills-container {
     display: grid;
