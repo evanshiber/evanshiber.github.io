@@ -129,7 +129,7 @@ footer {
 }
 .project img {
     display: inline-block; /* Ensures that the icons stay on the same line */
-    height: 60px; /* Adjust the size to match the font-awesome icons */
+    height: 200px; /* Adjust the size to match the font-awesome icons */
     vertical-align: middle; /* Aligns icons vertically to the middle */
     margin-right: 10px; /* Adds spacing between the icons */
 }
