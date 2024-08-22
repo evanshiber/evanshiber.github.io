@@ -140,6 +140,7 @@ footer {
     height: 60px; /* Ensure the icon is the same height as others */
     margin-right: 10px; /* Space between icons */
     vertical-align: middle; /* Aligns icons vertically to the middle */
+    max-width: 18px;
 }
 .skills-container {
     display: grid;
