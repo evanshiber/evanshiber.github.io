@@ -221,8 +221,10 @@ footer {
     padding: 20px;
     border-radius: 8px;
     position: relative;
-    max-width: 80vw; /* Adjusted to 80% of viewport width */
-    max-height: 80vh; /* Adjusted to 80% of viewport height */
+    max-width: 40vw; /* Halved from 80vw for desktop */
+    max-height: 40vh; /* Halved from 80vh for desktop */
+    min-width: 300px; /* Prevent too-small modals */
+    min-height: 200px; /* Prevent too-small modals */
     overflow: auto;
     display: flex;
     flex-direction: column;
@@ -248,8 +250,9 @@ footer {
 
 #pdf-canvas {
     border: 2px solid #000;
-    max-width: 100%; /* Ensures canvas fits within slideshow-content */
-    max-height: 70vh; /* Adjusted to fit within modal, leaving space for controls */
+    max-width: 100%; /* Fit within slideshow-content */
+    max-height: 35vh; /* Halved from 70vh for desktop */
+    min-height: 150px; /* Prevent too-small canvas */
 }
 
 .prev-slide, .next-slide {
