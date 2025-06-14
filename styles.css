@@ -206,7 +206,7 @@ footer {
 .slideshow-modal {
     display: none; /* Hidden by default */
     position: fixed;
-    z-index: 2;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
@@ -221,8 +221,8 @@ footer {
     padding: 20px;
     border-radius: 8px;
     position: relative;
-    max-width: 40vw; /* Halved from 80vw to 40vw */
-    max-height: 40vh; /* Halved from 80vh to 40vh */
+    max-width: 80vw; /* Adjusted to 80% of viewport width */
+    max-height: 80vh; /* Adjusted to 80% of viewport height */
     overflow: auto;
     display: flex;
     flex-direction: column;
@@ -249,7 +249,7 @@ footer {
 #pdf-canvas {
     border: 2px solid #000;
     max-width: 100%; /* Ensures canvas fits within slideshow-content */
-    max-height: 35vh; /* Halved from 70vh to 35vh */
+    max-height: 70vh; /* Adjusted to fit within modal, leaving space for controls */
 }
 
 .prev-slide, .next-slide {
@@ -266,17 +266,6 @@ footer {
     background-color: #fff;
     color: #000;
     border: 2px solid #000;
-}
-
-/* Media query for mobile devices */
-@media (max-width: 768px) {
-    .slideshow-content {
-        max-width: 47.5vw; /* Halved from 95vw to 47.5vw */
-        max-height: 42.5vh; /* Halved from 85vh to 42.5vh */
-    }
-    #pdf-canvas {
-        max-height: 30vh; /* Halved from 60vh to 30vh */
-    }
 }
 
 .contact {
@@ -431,16 +420,10 @@ footer {
         padding: 30px 0;
     }
     .slideshow-content {
-        width: 47.5vw;
-        height: 42.5vh;
-        max-width: 47.5vw;
-        max-height: 42.5vh;
-        min-width: 250px; /* Smaller minimum for mobile */
-        min-height: 150px;
+        max-width: 95vw; /* Slightly smaller on mobile */
+        max-height: 85vh; /* Slightly smaller on mobile */
     }
     #pdf-canvas {
-        height: 30vh;
-        max-height: 30vh;
-        min-height: 100px;
+        max-height: 60vh; /* Adjusted for smaller screens */
     }
 }
