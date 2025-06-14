@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     type();
 
-    document.addEventListener('DOMContentLoaded', function() {
     // Slideshow functionality
     const prevSlide = document.querySelector('.prev-slide');
     const nextSlide = document.querySelector('.next-slide');
