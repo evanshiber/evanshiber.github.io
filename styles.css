@@ -201,11 +201,12 @@ footer {
     font-size: 1.2em;
     margin-bottom: 10px;
 }
+
 /* Slideshow modal styles */
 .slideshow-modal {
     display: none !important; /* Ensure hidden on load */
     position: fixed;
-    z-index: 2000; /* Increased to stay above all content */
+    z-index: 2000; /* Stay above all content */
     left: 0;
     top: 0;
     width: 100%;
@@ -220,11 +221,13 @@ footer {
     padding: 20px;
     border-radius: 8px;
     position: relative;
-    width: 40vw; /* Explicit width, halved from 80vw */
-    height: 40vh; /* Explicit height, halved from 80vh */
-    max-width: 40vw; /* Enforce max size */
-    max-height: 40vh; /* Enforce max size */
-    overflow: hidden; /* Prevent content overflow */
+    width: 40vw; /* Explicit width */
+    height: 40vh; /* Explicit height */
+    max-width: 40vw;
+    max-height: 40vh;
+    min-width: 300px; /* Ensure minimum size for visibility */
+    min-height: 200px; /* Ensure minimum size for visibility */
+    overflow: auto; /* Allow scrolling if content overflows */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -250,9 +253,10 @@ footer {
 #pdf-canvas {
     border: 2px solid #000;
     width: 100%; /* Fit within slideshow-content */
-    height: 35vh; /* Explicit height, halved from 70vh */
-    max-width: 100%; /* Prevent overflow */
-    max-height: 35vh; /* Enforce max size */
+    height: 35vh; /* Explicit height */
+    max-width: 100%;
+    max-height: 35vh;
+    min-height: 150px; /* Ensure minimum canvas size */
 }
 
 .prev-slide, .next-slide {
@@ -269,56 +273,6 @@ footer {
     background-color: #fff;
     color: #000;
     border: 2px solid #000;
-}
-
-/* Media query for mobile devices */
-@media (max-width: 768px) {
-    .slideshow-content {
-        width: 47.5vw; /* Halved from 95vw */
-        height: 42.5vh; /* Halved from 85vh */
-        max-width: 47.5vw;
-        max-height: 42.5vh;
-    }
-    #pdf-canvas {
-        height: 30vh; /* Halved from 60vh */
-        max-height: 30vh;
-    }
-}
-/* Media query for mobile devices */
-@media (max-width: 768px) {
-    .skills-container {
-        grid-template-columns: 1fr; /* Single column layout */
-        grid-template-rows: auto; /* Adjust rows automatically */
-    }
-    .skills-container h2 {
-        grid-column: span 1; /* Header spans single column */
-    }
-    .skills {
-        height: auto; /* Adjust height for mobile */
-        padding: 20px; /* Adjust padding for mobile */
-    }
-    .container {
-        padding: 20px;
-    }
-    .project {
-        padding: 20px;
-    }
-    .projects-container {
-        grid-template-columns: 1fr;
-    }
-    .about-text h1 {
-        font-size: 1.5em;
-    }
-    .about-text p {
-        font-size: 1em;
-    }
-    .slideshow-content {
-        max-width: 47.5vw; /* Halved from 95vw to 47.5vw */
-        max-height: 42.5vh; /* Halved from 85vh to 42.5vh */
-    }
-    #pdf-canvas {
-        max-height: 30vh; /* Halved from 60vh to 30vh */
-    }
 }
 
 .contact {
@@ -471,5 +425,18 @@ footer {
         background-color: #000;
         color: #fff;
         padding: 30px 0;
+    }
+    .slideshow-content {
+        width: 47.5vw;
+        height: 42.5vh;
+        max-width: 47.5vw;
+        max-height: 42.5vh;
+        min-width: 250px; /* Smaller minimum for mobile */
+        min-height: 150px;
+    }
+    #pdf-canvas {
+        height: 30vh;
+        max-height: 30vh;
+        min-height: 100px;
     }
 }
