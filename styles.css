@@ -201,12 +201,11 @@ footer {
     font-size: 1.2em;
     margin-bottom: 10px;
 }
-
 /* Slideshow modal styles */
 .slideshow-modal {
-    display: none; /* Hidden by default */
+    display: none !important; /* Ensure hidden on load */
     position: fixed;
-    z-index: 1000;
+    z-index: 2000; /* Increased to stay above all content */
     left: 0;
     top: 0;
     width: 100%;
@@ -221,9 +220,11 @@ footer {
     padding: 20px;
     border-radius: 8px;
     position: relative;
-    max-width: 40vw; /* Halved from 80vw to 40vw */
-    max-height: 40vh; /* Halved from 80vh to 40vh */
-    overflow: auto;
+    width: 40vw; /* Explicit width, halved from 80vw */
+    height: 40vh; /* Explicit height, halved from 80vh */
+    max-width: 40vw; /* Enforce max size */
+    max-height: 40vh; /* Enforce max size */
+    overflow: hidden; /* Prevent content overflow */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -248,8 +249,10 @@ footer {
 
 #pdf-canvas {
     border: 2px solid #000;
-    max-width: 100%; /* Ensures canvas fits within slideshow-content */
-    max-height: 35vh; /* Halved from 70vh to 35vh */
+    width: 100%; /* Fit within slideshow-content */
+    height: 35vh; /* Explicit height, halved from 70vh */
+    max-width: 100%; /* Prevent overflow */
+    max-height: 35vh; /* Enforce max size */
 }
 
 .prev-slide, .next-slide {
@@ -268,6 +271,19 @@ footer {
     border: 2px solid #000;
 }
 
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .slideshow-content {
+        width: 47.5vw; /* Halved from 95vw */
+        height: 42.5vh; /* Halved from 85vh */
+        max-width: 47.5vw;
+        max-height: 42.5vh;
+    }
+    #pdf-canvas {
+        height: 30vh; /* Halved from 60vh */
+        max-height: 30vh;
+    }
+}
 /* Media query for mobile devices */
 @media (max-width: 768px) {
     .skills-container {
