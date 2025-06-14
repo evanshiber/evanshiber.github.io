@@ -235,10 +235,9 @@ footer {
 }
 
 #pdf-canvas {
-    border: 2px solid #000;
-    max-width: 100%; /* Fit within slideshow-content */
-    max-height: 35vh; /* Halved from 70vh */
-    min-height: 150px; /* Prevent clipping */
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .prev-slide, .next-slide {
