@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
 
-    pdfjsLib.getDocument('anomaly_detection_slides.pdf').promise.then(function(pdfDoc_) {
+    pdfjsLib.getDocument('Faculty Presentation (1).pdf').promise.then(function(pdfDoc_) {
         pdfDoc = pdfDoc_;
         pageCountDisplay.textContent = pdfDoc.numPages;
         renderPage(pageNum);
