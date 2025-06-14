@@ -65,16 +65,29 @@ document.addEventListener('DOMContentLoaded', function() {
 function renderPage(num) {
     pageRendering = true;
 
+    const container = document.querySelector('.slideshow-content');
+    const targetWidth = container.clientWidth;
+    const targetHeight = container.clientHeight - 50; // subtract buttons + margin
+
     pdfDoc.getPage(num).then(function(page) {
-        // Get the container's width
-        const container = document.querySelector('.slideshow-content');
-        const containerWidth = container.clientWidth;
-        const scale = containerWidth / page.getViewport({ scale: 1 }).width;
+        const unscaledViewport = page.getViewport({ scale: 1 });
+        const pdfAspectRatio = unscaledViewport.width / unscaledViewport.height;
+        const containerAspectRatio = targetWidth / targetHeight;
 
-        const viewport = page.getViewport({ scale: scale });
+        let scale;
+        if (containerAspectRatio > pdfAspectRatio) {
+            // Container is wider than PDF, limit by height
+            scale = targetHeight / unscaledViewport.height;
+        } else {
+            // Container is taller than PDF, limit by width
+            scale = targetWidth / unscaledViewport.width;
+        }
 
-        canvas.height = viewport.height;
+        const viewport = page.getViewport({ scale });
+
+        // Set canvas size to the scaled dimensions
         canvas.width = viewport.width;
+        canvas.height = viewport.height;
 
         const renderContext = {
             canvasContext: ctx,
@@ -84,6 +97,7 @@ function renderPage(num) {
         page.render(renderContext).promise.then(function() {
             pageRendering = false;
             pageNumDisplay.textContent = num;
+
             if (pageNumPending !== null) {
                 renderPage(pageNumPending);
                 pageNumPending = null;
