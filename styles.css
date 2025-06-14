@@ -202,42 +202,28 @@ footer {
     margin-bottom: 10px;
 }
 
-/* Slideshow modal styles */
-.slideshow-modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
-    align-items: center;
-    justify-content: center;
+/* Slideshow container styles */
+.slideshow-container {
+    display: block; /* Always visible */
+    position: static; /* Flow naturally in project div */
+    width: 100%; /* Fit within project */
+    text-align: center; /* Center content */
+    margin-bottom: 10px; /* Space below slideshow */
 }
 
 .slideshow-content {
     background-color: #fff;
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
-    position: relative;
-    max-width: 40vw; /* Halved from 80vw for desktop */
-    max-height: 40vh; /* Halved from 80vh for desktop */
-    min-width: 300px; /* Prevent too-small modals */
-    min-height: 200px; /* Prevent too-small modals */
-    overflow: auto;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     align-items: center;
-}
-
-.close-slideshow {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
-    cursor: pointer;
-    color: #000;
+    max-width: 40vw; /* Halved from 80vw */
+    max-height: 40vh; /* Halved from 80vh */
+    min-width: 300px; /* Prevent clipping */
+    min-height: 200px; /* Prevent clipping */
+    overflow: auto;
+    border: 2px solid #000; /* Match project aesthetic */
 }
 
 .slideshow-controls {
@@ -251,8 +237,8 @@ footer {
 #pdf-canvas {
     border: 2px solid #000;
     max-width: 100%; /* Fit within slideshow-content */
-    max-height: 35vh; /* Halved from 70vh for desktop */
-    min-height: 150px; /* Prevent too-small canvas */
+    max-height: 35vh; /* Halved from 70vh */
+    min-height: 150px; /* Prevent clipping */
 }
 
 .prev-slide, .next-slide {
@@ -423,10 +409,13 @@ footer {
         padding: 30px 0;
     }
     .slideshow-content {
-        max-width: 95vw; /* Slightly smaller on mobile */
-        max-height: 85vh; /* Slightly smaller on mobile */
+        max-width: 95vw;
+        max-height: 85vh;
+        min-width: 250px;
+        min-height: 150px;
     }
     #pdf-canvas {
-        max-height: 60vh; /* Adjusted for smaller screens */
+        max-height: 60vh;
+        min-height: 100px;
     }
 }
