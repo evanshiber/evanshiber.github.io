@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function renderPage(num) {
         pageRendering = true;
         pdfDoc.getPage(num).then(function(page) {
-            const viewport = page.getViewport({ scale: 1.5 });
+            const viewport = page.getViewport({ scale: 0.75 });
             canvas.height = viewport.height;
             canvas.width = viewport.width;
 
