@@ -64,11 +64,13 @@ footer {
     background-color: #fff;
     color: #000;
 }
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px;
 }
+
 .project {
     margin-bottom: 40px;
     border: 6px solid #fff;
@@ -79,11 +81,13 @@ footer {
     align-items: center;
     text-align: center;
 }
+
 .projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
+
 .project .icons {
     display: flex; /* Use flex to place icons on the same line */
     align-items: center; /* Align icons vertically in the center */
@@ -116,21 +120,26 @@ footer {
     margin-bottom: -30px; /* Use negative margin to further decrease space below the about section */
     margin-top: 30px; /* Increase space above the about section */
 }
+
 .about-text {
     max-width: 600px;
 }
+
 .about-text h1 {
     font-size: 3em;
     margin-bottom: 0px;
 }
+
 .about-text p {
     font-size: 1.2em;
     margin-bottom: 45px;
 }
+
 .about-text p .light-text {
     font-weight: 300;
     font-style: italic;
 }
+
 .project-thumbnail {
     display: inline-block; /* Ensures that the icons stay on the same line */
     height: 200px; /* Adjust the size to match the font-awesome icons */
@@ -138,12 +147,14 @@ footer {
     margin-right: 10px; /* Adds spacing between the icons */
     padding: 8px;
 }
+
 /* Postman icon */
 .project-icon {
     height: 55px;
     width: 55px;
     padding: 2px;
-} 
+}
+
 /* Specific style for the CI/CD icon if needed */
 .CI-CD-icon {
     width: 100px; /* Adjusted width for the CI/CD icon */
@@ -165,11 +176,13 @@ footer {
     margin-top: -10px; /* Use negative margin to further decrease space above the skills section */
     margin-bottom: 60px; /* Increase space below the skills section */
 }
+
 .skills-container h2 {
     grid-column: span 2; /* Make the header span both columns */
     margin-bottom: 10px; /* Decrease space between title and grid */
     font-size: 2.5em;
 }
+
 .skills {
     padding: 40px; /* Increase padding for larger size */
     display: flex;
@@ -183,10 +196,78 @@ footer {
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
     margin: 10px 0; /* Add vertical margin to prevent overlap */
 }
+
 .skill-category {
     font-size: 1.2em;
     margin-bottom: 10px;
 }
+
+/* Slideshow modal styles */
+.slideshow-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    align-items: center;
+    justify-content: center;
+}
+
+.slideshow-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    max-width: 40vw; /* Halved from 80vw to 40vw */
+    max-height: 40vh; /* Halved from 80vh to 40vh */
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.close-slideshow {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #000;
+}
+
+.slideshow-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#pdf-canvas {
+    border: 2px solid #000;
+    max-width: 100%; /* Ensures canvas fits within slideshow-content */
+    max-height: 35vh; /* Halved from 70vh to 35vh */
+}
+
+.prev-slide, .next-slide {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 4px;
+}
+
+.prev-slide:hover, .next-slide:hover {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
+
 /* Media query for mobile devices */
 @media (max-width: 768px) {
     .skills-container {
@@ -215,7 +296,15 @@ footer {
     .about-text p {
         font-size: 1em;
     }
+    .slideshow-content {
+        max-width: 47.5vw; /* Halved from 95vw to 47.5vw */
+        max-height: 42.5vh; /* Halved from 85vh to 42.5vh */
+    }
+    #pdf-canvas {
+        max-height: 30vh; /* Halved from 60vh to 30vh */
+    }
 }
+
 .contact {
     margin-bottom: 40px;
     border: 6px solid #fff;
@@ -227,6 +316,7 @@ footer {
     list-style: none;
     padding: 20px;
 }
+
 .contact li {
     font-size: 1.2em;
     margin-bottom: 10px;
@@ -235,38 +325,37 @@ footer {
     justify-content: center;
     width: auto;
     margin-left: -15px;
-
-    /*padding: 15px; /* Padding inside each list item for space around the text */
-    /*border: 2px solid #000; /* Inner border around each list item */
-    /*border-radius: 345px; /* Optional: Add rounded corners */
-    
 }
+
 .contact li i {
     margin-right: 10px;
 }
+
 .contact a {
     text-decoration: none;
     color: rgb(0, 0, 238);
 }
 
-/* Projects Section Background*/
+/* Projects Section Background */
 .inverse-section {
     padding-top: 40px;
     background-color: black;
     color: white;
     padding: 100px 0;
-
 }
+
 .hero--section--title {
     font-size: 2em;
     color: black;
 }
+
 .typed-cursor--blink {
     font-weight: 100;
     font-size: 1.25em;
     color: black;
     animation: blink 0.7s infinite;
 }
+
 @keyframes blink {
     0%, 100% {
         opacity: 1;
@@ -275,6 +364,7 @@ footer {
         opacity: 0;
     }
 }
+
 .profile-photo {
     width: 300px;
     height: 300px;
@@ -283,6 +373,7 @@ footer {
     border: 4px solid #000;
     object-fit: cover;
 }
+
 .full-screen-section {
     background-color: white;
     color: black;
@@ -305,7 +396,7 @@ footer {
     text-align: center;
 }
 
-/* Contaction Section Title */
+/* Contact Section Title */
 .contact-container h2 {
     margin: 0;
     margin-bottom: 30px;
