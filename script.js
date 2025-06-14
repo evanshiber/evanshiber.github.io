@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Existing typing animation
     const texts = ["Network Security", "Penetration Testing", "Software Development"];
     let count = 0;
     let index = 0;
@@ -47,4 +48,96 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     type();
+
+    // Slideshow functionality
+    const slideshowLink = document.querySelector('.slideshow-link');
+    const slideshowModal = document.getElementById('anomaly-detection-slideshow');
+    const closeSlideshow = document.querySelector('.close-slideshow');
+    const prevSlide = document.querySelector('.prev-slide');
+    const nextSlide = document.querySelector('.next-slide');
+    const canvas = document.getElementById('pdf-canvas');
+    const pageNumDisplay = document.getElementById('page-num');
+    const pageCountDisplay = document.getElementById('page-count');
+    const ctx = canvas.getContext('2d');
+
+    let pdfDoc = null;
+    let pageNum = 1;
+    let pageRendering = false;
+    let pageNumPending = null;
+
+    // Set PDF.js worker source
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
+
+    // Load PDF
+    pdfjsLib.getDocument('assets/anomaly_detection_slides.pdf').promise.then(function(pdfDoc_) {
+        pdfDoc = pdfDoc_;
+        pageCountDisplay.textContent = pdfDoc.numPages;
+        renderPage(pageNum);
+    }).catch(function(error) {
+        console.error('Error loading PDF:', error);
+        alert('Failed to load the slideshow. Please ensure the PDF file is correctly placed in the assets folder.');
+    });
+
+    // Render a specific page
+    function renderPage(num) {
+        pageRendering = true;
+        pdfDoc.getPage(num).then(function(page) {
+            const viewport = page.getViewport({ scale: 1.5 });
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+
+            const renderContext = {
+                canvasContext: ctx,
+                viewport: viewport
+            };
+            page.render(renderContext).promise.then(function() {
+                pageRendering = false;
+                pageNumDisplay.textContent = num;
+                if (pageNumPending !== null) {
+                    renderPage(pageNumPending);
+                    pageNumPending = null;
+                }
+            });
+        });
+    }
+
+    // Queue page rendering if another render is in progress
+    function queueRenderPage(num) {
+        if (pageRendering) {
+            pageNumPending = num;
+        } else {
+            renderPage(num);
+        }
+    }
+
+    // Event listeners for navigation
+    prevSlide.addEventListener('click', function() {
+        if (pageNum <= 1) return;
+        pageNum--;
+        queueRenderPage(pageNum);
+    });
+
+    nextSlide.addEventListener('click', function() {
+        if (pageNum >= pdfDoc.numPages) return;
+        pageNum++;
+        queueRenderPage(pageNum);
+    });
+
+    // Open slideshow
+    slideshowLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        slideshowModal.style.display = 'flex';
+    });
+
+    // Close slideshow
+    closeSlideshow.addEventListener('click', function() {
+        slideshowModal.style.display = 'none';
+    });
+
+    // Close modal when clicking outside
+    slideshowModal.addEventListener('click', function(e) {
+        if (e.target === slideshowModal) {
+            slideshowModal.style.display = 'none';
+        }
+    });
 });
