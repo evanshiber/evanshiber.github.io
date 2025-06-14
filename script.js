@@ -62,27 +62,35 @@ document.addEventListener('DOMContentLoaded', function() {
         alert('Failed to load the slideshow. Please ensure the PDF file is correctly placed.');
     });
 
-    function renderPage(num) {
-        pageRendering = true;
-        pdfDoc.getPage(num).then(function(page) {
-            const viewport = page.getViewport({ scale: 0.75 });
-            canvas.height = viewport.height;
-            canvas.width = viewport.width;
+function renderPage(num) {
+    pageRendering = true;
 
-            const renderContext = {
-                canvasContext: ctx,
-                viewport: viewport
-            };
-            page.render(renderContext).promise.then(function() {
-                pageRendering = false;
-                pageNumDisplay.textContent = num;
-                if (pageNumPending !== null) {
-                    renderPage(pageNumPending);
-                    pageNumPending = null;
-                }
-            });
+    pdfDoc.getPage(num).then(function(page) {
+        // Get the container's width
+        const container = document.querySelector('.slideshow-content');
+        const containerWidth = container.clientWidth;
+        const scale = containerWidth / page.getViewport({ scale: 1 }).width;
+
+        const viewport = page.getViewport({ scale: scale });
+
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+
+        const renderContext = {
+            canvasContext: ctx,
+            viewport: viewport
+        };
+
+        page.render(renderContext).promise.then(function() {
+            pageRendering = false;
+            pageNumDisplay.textContent = num;
+            if (pageNumPending !== null) {
+                renderPage(pageNumPending);
+                pageNumPending = null;
+            }
         });
-    }
+    });
+}
 
     function queueRenderPage(num) {
         if (pageRendering) {
