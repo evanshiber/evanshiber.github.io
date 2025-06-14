@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Existing typing animation
+    // Typing animation
     const texts = ["Network Security", "Penetration Testing", "Software Development"];
     let count = 0;
     let index = 0;
@@ -8,37 +8,26 @@ document.addEventListener('DOMContentLoaded', function() {
     let isDeleting = false;
 
     function type() {
-        if (count === texts.length) {
-            count = 0;
-        }
+        if (count === texts.length) count = 0;
         currentText = texts[count];
 
         if (isDeleting) {
-            // Deleting characters
-            console.log('Deleting characters');
             letter = currentText.slice(0, --index);
         } else {
-            // Typing characters
             letter = currentText.slice(0, ++index);
         }
 
         document.querySelector('.hero--section--title span').textContent = letter;
 
         let typeSpeed = 60;
-        if (isDeleting) {
-            typeSpeed /= 3; // Speed up when deleting
-        }
+        if (isDeleting) typeSpeed /= 3;
 
         if (!isDeleting && letter.length === currentText.length) {
-            // Pause before starting to delete
-            console.log('Pausing before starting to delete');
             setTimeout(() => {
                 isDeleting = true;
                 type();
             }, 1000);
         } else if (isDeleting && letter.length === 0) {
-            // Pause before typing the next text
-            console.log('Pausing before typing the next text');
             isDeleting = false;
             count++;
             setTimeout(type, 500);
@@ -62,11 +51,9 @@ document.addEventListener('DOMContentLoaded', function() {
     let pageRendering = false;
     let pageNumPending = null;
 
-    // Set PDF.js worker source
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
 
-    // Load PDF
-    pdfjsLib.getDocument('Faculty Presentation (1).pdf').promise.then(function(pdfDoc_) {
+    pdfjsLib.getDocument('anomaly_detection_slides.pdf').promise.then(function(pdfDoc_) {
         pdfDoc = pdfDoc_;
         pageCountDisplay.textContent = pdfDoc.numPages;
         renderPage(pageNum);
@@ -75,11 +62,10 @@ document.addEventListener('DOMContentLoaded', function() {
         alert('Failed to load the slideshow. Please ensure the PDF file is correctly placed.');
     });
 
-    // Render a specific page
     function renderPage(num) {
         pageRendering = true;
         pdfDoc.getPage(num).then(function(page) {
-            const viewport = page.getViewport({ scale: 0.75 }); // Matches smaller size
+            const viewport = page.getViewport({ scale: 0.75 });
             canvas.height = viewport.height;
             canvas.width = viewport.width;
 
@@ -98,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Queue page rendering
     function queueRenderPage(num) {
         if (pageRendering) {
             pageNumPending = num;
@@ -107,7 +92,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Navigation event listeners
     prevSlide.addEventListener('click', function() {
         if (pageNum <= 1) return;
         pageNum--;
