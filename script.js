@@ -50,9 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
     type();
 
     // Slideshow functionality
-    const slideshowLink = document.querySelector('.slideshow-link');
-    const slideshowModal = document.getElementById('anomaly-detection-slideshow');
-    const closeSlideshow = document.querySelector('.close-slideshow');
     const prevSlide = document.querySelector('.prev-slide');
     const nextSlide = document.querySelector('.next-slide');
     const canvas = document.getElementById('pdf-canvas');
@@ -69,20 +66,20 @@ document.addEventListener('DOMContentLoaded', function() {
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
 
     // Load PDF
-    pdfjsLib.getDocument('Faculty Presentation (1).pdf').promise.then(function(pdfDoc_) {
+    pdfjsLib.getDocument('anomaly_detection_slides.pdf').promise.then(function(pdfDoc_) {
         pdfDoc = pdfDoc_;
         pageCountDisplay.textContent = pdfDoc.numPages;
         renderPage(pageNum);
     }).catch(function(error) {
         console.error('Error loading PDF:', error);
-        alert('Failed to load the slideshow. Please ensure the PDF file is correctly placed in the assets folder.');
+        alert('Failed to load the slideshow. Please ensure the PDF file is correctly placed.');
     });
 
     // Render a specific page
     function renderPage(num) {
         pageRendering = true;
         pdfDoc.getPage(num).then(function(page) {
-            const viewport = page.getViewport({ scale: 0.75 });
+            const viewport = page.getViewport({ scale: 0.75 }); // Matches smaller size
             canvas.height = viewport.height;
             canvas.width = viewport.width;
 
@@ -101,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Queue page rendering if another render is in progress
+    // Queue page rendering
     function queueRenderPage(num) {
         if (pageRendering) {
             pageNumPending = num;
@@ -110,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Event listeners for navigation
+    // Navigation event listeners
     prevSlide.addEventListener('click', function() {
         if (pageNum <= 1) return;
         pageNum--;
@@ -121,23 +118,5 @@ document.addEventListener('DOMContentLoaded', function() {
         if (pageNum >= pdfDoc.numPages) return;
         pageNum++;
         queueRenderPage(pageNum);
-    });
-
-    // Open slideshow
-    slideshowLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        slideshowModal.style.display = 'flex';
-    });
-
-    // Close slideshow
-    closeSlideshow.addEventListener('click', function() {
-        slideshowModal.style.display = 'none';
-    });
-
-    // Close modal when clicking outside
-    slideshowModal.addEventListener('click', function(e) {
-        if (e.target === slideshowModal) {
-            slideshowModal.style.display = 'none';
-        }
     });
 });
